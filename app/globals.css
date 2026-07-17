@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #f6f4ee;
+}
+
+html,
+body {
+  background-color: var(--bg);
+  color: #262519;
+}
+
+/* Suaviza el desplazamiento */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Oculta la barra de scroll horizontal en filtros */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
