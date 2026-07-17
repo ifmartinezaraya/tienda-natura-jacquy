@@ -1,11 +1,11 @@
 'use client';
 
 import Link from 'next/link';
-import Image from 'next/image';
 import { useState } from 'react';
 import type { Producto } from '@/lib/types';
 import { formatCLP } from '@/lib/format';
 import { useCart } from '@/components/CartProvider';
+import { ProductoImagen } from '@/components/ProductoImagen';
 
 export function ProductCard({ producto }: { producto: Producto }) {
   const { agregar } = useCart();
@@ -21,48 +21,42 @@ export function ProductCard({ producto }: { producto: Producto }) {
   }
 
   return (
-    <div className="group flex flex-col overflow-hidden rounded-xl2 bg-cream-card shadow-soft transition hover:-translate-y-0.5 hover:shadow-lg">
+    <div className="group flex flex-col overflow-hidden rounded-2xl border border-sand/70 bg-cream-card transition duration-300 hover:-translate-y-1 hover:border-sand hover:shadow-soft">
       <Link href={`/producto/${producto.id}`} className="block">
-        <div className="relative aspect-square w-full overflow-hidden bg-sand/40">
-          {producto.imagen_url ? (
-            <Image
-              src={producto.imagen_url}
-              alt={producto.nombre}
-              fill
-              sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
-              className="object-cover transition group-hover:scale-105"
-            />
-          ) : (
-            <div className="flex h-full w-full items-center justify-center text-forest/30">
-              <svg width="46" height="46" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-                <path d="M12 2C7 7 7 12 12 22c5-10 5-15 0-20z" />
-              </svg>
-            </div>
-          )}
+        <div className="relative aspect-square w-full overflow-hidden">
+          <ProductoImagen
+            src={producto.imagen_url}
+            alt={producto.nombre}
+            categoria={producto.categoria}
+            sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
+          />
           {agotado && (
-            <span className="absolute left-2 top-2 rounded-full bg-ink/80 px-2.5 py-1 text-[10px] font-extrabold uppercase tracking-wide text-white">
+            <span className="absolute left-3 top-3 rounded-full bg-ink/75 px-2.5 py-1 text-[10px] font-extrabold uppercase tracking-wide text-white backdrop-blur">
               Agotado
             </span>
           )}
         </div>
       </Link>
 
-      <div className="flex flex-1 flex-col p-3">
-        <span className="text-[10px] uppercase tracking-wide text-ink-soft">
+      <div className="flex flex-1 flex-col p-4">
+        <span className="text-[10px] font-semibold uppercase tracking-[0.12em] text-clay">
           {producto.categoria}
         </span>
         <Link href={`/producto/${producto.id}`}>
-          <h3 className="mt-0.5 line-clamp-2 font-serif text-sm font-semibold leading-snug text-ink hover:text-forest">
+          <h3 className="mt-1 line-clamp-2 min-h-[2.6rem] font-serif text-[15px] font-semibold leading-snug text-ink transition group-hover:text-forest">
             {producto.nombre}
           </h3>
         </Link>
 
-        <div className="mt-auto flex items-end justify-between pt-3">
-          <span className="font-bold text-forest">{formatCLP(producto.precio)}</span>
+        <div className="mt-auto flex items-center justify-between pt-3">
+          <span className="font-serif text-lg font-bold text-forest">
+            {formatCLP(producto.precio)}
+          </span>
           <button
             onClick={onAgregar}
             disabled={agotado}
-            className={`rounded-lg px-3 py-1.5 text-xs font-bold transition ${
+            aria-label={`Agregar ${producto.nombre} al carrito`}
+            className={`flex h-9 items-center justify-center rounded-full px-4 text-xs font-bold transition ${
               agotado
                 ? 'cursor-not-allowed bg-sand text-ink-soft'
                 : agregado
@@ -70,7 +64,7 @@ export function ProductCard({ producto }: { producto: Producto }) {
                   : 'bg-forest text-white hover:bg-forest-deep'
             }`}
           >
-            {agotado ? 'Sin stock' : agregado ? '¡Agregado!' : 'Agregar'}
+            {agotado ? 'Sin stock' : agregado ? '✓ Agregado' : 'Agregar'}
           </button>
         </div>
       </div>

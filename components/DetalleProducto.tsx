@@ -1,11 +1,11 @@
 'use client';
 
-import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
 import type { Producto } from '@/lib/types';
 import { formatCLP } from '@/lib/format';
 import { useCart } from '@/components/CartProvider';
+import { ProductoImagen } from '@/components/ProductoImagen';
 
 export function DetalleProducto({ producto }: { producto: Producto }) {
   const { agregar } = useCart();
@@ -23,23 +23,14 @@ export function DetalleProducto({ producto }: { producto: Producto }) {
   return (
     <div className="mx-auto grid max-w-5xl gap-6 px-4 py-8 md:grid-cols-2">
       {/* Imagen */}
-      <div className="relative aspect-square overflow-hidden rounded-xl2 bg-sand/40 shadow-soft">
-        {producto.imagen_url ? (
-          <Image
-            src={producto.imagen_url}
-            alt={producto.nombre}
-            fill
-            sizes="(max-width: 768px) 100vw, 50vw"
-            className="object-cover"
-            priority
-          />
-        ) : (
-          <div className="flex h-full w-full items-center justify-center text-forest/25">
-            <svg width="90" height="90" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2">
-              <path d="M12 2C7 7 7 12 12 22c5-10 5-15 0-20z" />
-            </svg>
-          </div>
-        )}
+      <div className="relative aspect-square overflow-hidden rounded-2xl border border-sand/70 bg-cream-card shadow-soft">
+        <ProductoImagen
+          src={producto.imagen_url}
+          alt={producto.nombre}
+          categoria={producto.categoria}
+          sizes="(max-width: 768px) 100vw, 50vw"
+          priority
+        />
       </div>
 
       {/* Info */}
