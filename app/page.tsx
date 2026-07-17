@@ -9,12 +9,16 @@ export const revalidate = 60;
 
 export default async function HomePage() {
   // --- Diagnostico de configuracion (seguro: no muestra claves) ---
-  const urlEnv = process.env.NEXT_PUBLIC_SUPABASE_URL || '';
-  const keyEnv = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || '';
+  const urlRaw = process.env.NEXT_PUBLIC_SUPABASE_URL || '';
+  const keyRaw = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || '';
+  const urlEnv = urlRaw.trim();
+  const keyEnv = keyRaw.trim();
   const diag = {
     tieneUrl: urlEnv.length > 0,
     urlValida: urlEnv.startsWith('https://') && urlEnv.includes('.supabase.co'),
     hostUrl: urlEnv ? urlEnv.replace('https://', '').split('.')[0] : '(vacia)',
+    urlConEspacios: urlRaw !== urlRaw.trim(),
+    claveConEspacios: keyRaw !== keyRaw.trim(),
     tieneClave: keyEnv.length > 0,
     tipoClave: keyEnv.startsWith('sb_publishable_')
       ? 'publishable (correcta)'
@@ -73,6 +77,7 @@ export default async function HomePage() {
               <li>{diag.urlValida ? '✅' : '❌'} URL con formato valido (proyecto: <b>{diag.hostUrl}</b>)</li>
               <li>{diag.tieneClave ? '✅' : '❌'} Variable de clave detectada: <b>{diag.tieneClave ? 'SI' : 'NO (falta)'}</b></li>
               <li>{diag.tipoClave.includes('correcta') ? '✅' : '❌'} Tipo de clave: <b>{diag.tipoClave}</b> (largo: {diag.largoClave})</li>
+              <li>{diag.urlConEspacios || diag.claveConEspacios ? '⚠️' : '✅'} Espacios invisibles: <b>{diag.urlConEspacios ? 'SI en la URL' : diag.claveConEspacios ? 'SI en la clave' : 'no'}</b></li>
             </ul>
             <div className="mt-3 rounded-lg bg-[#FBEAE8] p-3 text-xs text-rose-deep">
               <b>Error tecnico de Supabase:</b>
