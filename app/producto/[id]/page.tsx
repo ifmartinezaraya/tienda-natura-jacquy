@@ -1,6 +1,7 @@
 import { notFound } from 'next/navigation';
 import { createClient } from '@/lib/supabase/server';
-import { Header } from '@/components/Header';
+import { SiteHeader } from '@/components/SiteHeader';
+import { SiteFooter } from '@/components/SiteFooter';
 import { DetalleProducto } from '@/components/DetalleProducto';
 import type { Producto } from '@/lib/types';
 
@@ -23,8 +24,9 @@ export default async function ProductoPage({
 
   return (
     <main className="min-h-screen">
-      <Header />
+      <SiteHeader />
       <DetalleProducto producto={data as Producto} />
+      <SiteFooter />
     </main>
   );
 }

@@ -12,9 +12,17 @@ function normalizar(s: string): string {
     .replace(/[\u0300-\u036f]/g, '');
 }
 
-export function Catalogo({ productos }: { productos: Producto[] }) {
-  const [busqueda, setBusqueda] = useState('');
-  const [categoria, setCategoria] = useState<string>('');
+export function Catalogo({
+  productos,
+  initialBusqueda = '',
+  initialCategoria = '',
+}: {
+  productos: Producto[];
+  initialBusqueda?: string;
+  initialCategoria?: string;
+}) {
+  const [busqueda, setBusqueda] = useState(initialBusqueda);
+  const [categoria, setCategoria] = useState<string>(initialCategoria);
   const gridRef = useRef<HTMLDivElement>(null);
 
   const categorias = useMemo(() => {

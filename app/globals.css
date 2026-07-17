@@ -25,3 +25,38 @@ html {
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+
+
+/* Estilos para paginas de contenido (nosotros, politicas, etc.) */
+.prose-nj h2 {
+  font-family: var(--font-fraunces), Georgia, serif;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #2b3d2e;
+  margin-top: 1.75rem;
+  margin-bottom: 0.5rem;
+}
+.prose-nj h3 {
+  font-weight: 700;
+  color: #262519;
+  margin-top: 1rem;
+  margin-bottom: 0.25rem;
+}
+.prose-nj p {
+  color: #4a4838;
+}
+.prose-nj ul {
+  list-style: disc;
+  padding-left: 1.25rem;
+  color: #4a4838;
+}
+.prose-nj li {
+  margin-top: 0.25rem;
+}
+.prose-nj a {
+  color: #2b3d2e;
+  text-decoration: underline;
+}
+.prose-nj strong {
+  color: #262519;
+}

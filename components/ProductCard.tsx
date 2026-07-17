@@ -6,6 +6,7 @@ import type { Producto } from '@/lib/types';
 import { formatCLP } from '@/lib/format';
 import { useCart } from '@/components/CartProvider';
 import { ProductoImagen } from '@/components/ProductoImagen';
+import { FavoriteButton } from '@/components/FavoriteButton';
 
 export function ProductCard({ producto }: { producto: Producto }) {
   const { agregar } = useCart();
@@ -35,6 +36,7 @@ export function ProductCard({ producto }: { producto: Producto }) {
               Agotado
             </span>
           )}
+          <FavoriteButton producto={producto} className="absolute right-3 top-3" />
         </div>
       </Link>
 

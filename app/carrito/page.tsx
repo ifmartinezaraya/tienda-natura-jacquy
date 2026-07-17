@@ -2,7 +2,8 @@
 
 import Link from 'next/link';
 import { useState } from 'react';
-import { Header } from '@/components/Header';
+import { SiteHeader } from '@/components/SiteHeader';
+import { SiteFooter } from '@/components/SiteFooter';
 import { useCart } from '@/components/CartProvider';
 import { formatCLP } from '@/lib/format';
 import { createClient } from '@/lib/supabase/client';
@@ -70,7 +71,7 @@ export default function CarritoPage() {
 
   return (
     <main className="min-h-screen">
-      <Header />
+      <SiteHeader />
 
       <div className="mx-auto max-w-3xl px-4 py-8">
         <h1 className="mb-5 font-serif text-2xl font-semibold text-ink">
@@ -206,6 +207,8 @@ export default function CarritoPage() {
           </>
         )}
       </div>
+
+      <SiteFooter />
     </main>
   );
 }

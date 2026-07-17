@@ -29,3 +29,22 @@ const DEFECTO: EstiloCategoria = { bg: '#EDEBE6', fg: '#767462' };
 export function estiloCategoria(categoria: string): EstiloCategoria {
   return ESTILOS[categoria] ?? DEFECTO;
 }
+
+
+// Lista ordenada de categorias para el menu de navegacion del sitio.
+export const CATEGORIAS = [
+  'Cuidado Facial',
+  'Cuerpo',
+  'Cabello',
+  'Shampoo',
+  'Colonias',
+  'Fragancias',
+  'Perfumeria',
+  'Maquillaje',
+  'Jabones',
+  'Cremas',
+  'Aceites',
+  'Desodorantes',
+  'Repuestos',
+  'Accesorios',
+];
