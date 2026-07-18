@@ -19,7 +19,7 @@ const BENEFICIOS = [
     ),
   },
   {
-    titulo: 'Productos originales',
+    titulo: 'Productos originales Natura',
     texto: 'Cosmetica natural de confianza',
     icono: (
       <>

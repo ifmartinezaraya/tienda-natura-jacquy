@@ -26,7 +26,7 @@ export function SiteHeader() {
       {/* Barra de anuncios */}
       <div className="bg-forest-deep text-center text-[12px] font-medium tracking-wide text-[#E4DFCF]">
         <div className="mx-auto max-w-7xl px-4 py-2">
-          Envios coordinados a todo el pais &nbsp;·&nbsp; Haz tu pedido facil por WhatsApp
+          Consultora Natura &nbsp;·&nbsp; Productos 100% originales &nbsp;·&nbsp; Pedidos por WhatsApp
         </div>
       </div>
 
