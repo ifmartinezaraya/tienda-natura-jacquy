@@ -2,14 +2,14 @@ import Link from 'next/link';
 
 // Album por categoria: ilustracion vectorial minimalista + enlace a esa categoria.
 const ALBUMES: { nombre: string; img: string; href: string }[] = [
-  { nombre: 'Cuidado Facial', img: '/banners/cat/facial.svg', href: '/?cat=Cuidado%20Facial#catalogo' },
-  { nombre: 'Perfumeria', img: '/banners/cat/perfumeria.svg', href: '/?cat=Perfumeria#catalogo' },
-  { nombre: 'Maquillaje', img: '/banners/cat/maquillaje.svg', href: '/?cat=Maquillaje#catalogo' },
-  { nombre: 'Cabello', img: '/banners/cat/cabello.svg', href: '/?cat=Cabello#catalogo' },
-  { nombre: 'Cremas', img: '/banners/cat/cremas.svg', href: '/?cat=Cremas#catalogo' },
-  { nombre: 'Colonias', img: '/banners/cat/colonias.svg', href: '/?cat=Colonias#catalogo' },
-  { nombre: 'Jabones', img: '/banners/cat/jabones.svg', href: '/?cat=Jabones#catalogo' },
-  { nombre: 'Desodorantes', img: '/banners/cat/desodorantes.svg', href: '/?cat=Desodorantes#catalogo' },
+  { nombre: 'Cuidado Facial', img: '/banners/cat/facial.svg', href: '/catalogo?cat=Cuidado%20Facial' },
+  { nombre: 'Perfumeria', img: '/banners/cat/perfumeria.svg', href: '/catalogo?cat=Perfumeria' },
+  { nombre: 'Maquillaje', img: '/banners/cat/maquillaje.svg', href: '/catalogo?cat=Maquillaje' },
+  { nombre: 'Cabello', img: '/banners/cat/cabello.svg', href: '/catalogo?cat=Cabello' },
+  { nombre: 'Cremas', img: '/banners/cat/cremas.svg', href: '/catalogo?cat=Cremas' },
+  { nombre: 'Colonias', img: '/banners/cat/colonias.svg', href: '/catalogo?cat=Colonias' },
+  { nombre: 'Jabones', img: '/banners/cat/jabones.svg', href: '/catalogo?cat=Jabones' },
+  { nombre: 'Desodorantes', img: '/banners/cat/desodorantes.svg', href: '/catalogo?cat=Desodorantes' },
 ];
 
 export function QuickCategories() {

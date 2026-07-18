@@ -52,15 +52,15 @@ export function HeroCarousel() {
                 {s.cta}
               </a>
             ) : (
-              <Link href={`/${s.href}`} className="rounded-full bg-cream px-7 py-3.5 text-sm font-extrabold text-forest shadow-lg transition hover:bg-white">
+              <Link href={href} className="rounded-full bg-cream px-7 py-3.5 text-sm font-extrabold text-forest shadow-lg transition hover:bg-white">
                 {s.cta}
               </Link>
             )}
             <Link
-              href="/#catalogo"
+              href="/catalogo"
               className="rounded-full border border-cream/50 px-7 py-3.5 text-sm font-bold text-cream backdrop-blur-sm transition hover:bg-white/10"
             >
-              Ver categorias
+              Ver catalogo
             </Link>
           </div>
         </div>

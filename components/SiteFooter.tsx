@@ -21,7 +21,7 @@ export function SiteFooter() {
           <ul className="mt-3 space-y-2 text-sm text-[#E4DFCF]">
             <li><Link href="/nosotros" className="hover:text-white">Sobre nosotros</Link></li>
             <li><Link href="/nosotros#sustentabilidad" className="hover:text-white">Sustentabilidad</Link></li>
-            <li><Link href="/#catalogo" className="hover:text-white">Nuestro catalogo</Link></li>
+            <li><Link href="/catalogo" className="hover:text-white">Nuestro catalogo</Link></li>
           </ul>
         </div>
         <div>

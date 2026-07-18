@@ -52,7 +52,7 @@ export function DetalleProducto({
         <nav className="text-xs text-ink-soft">
           <Link href="/" className="hover:text-forest">Inicio</Link>
           <span className="mx-2">/</span>
-          <Link href={`/?cat=${encodeURIComponent(producto.categoria)}#catalogo`} className="hover:text-forest">
+          <Link href={`/catalogo?cat=${encodeURIComponent(producto.categoria)}`} className="hover:text-forest">
             {producto.categoria}
           </Link>
           <span className="mx-2">/</span>

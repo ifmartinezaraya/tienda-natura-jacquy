@@ -12,7 +12,7 @@ const INGREDIENTES = [
       'Rica en aceites y nutrientes, ayuda a nutrir profundamente la piel dejandola suave y confortada. Ideal para pieles que buscan hidratacion y cuidado diario.',
     img: IMG('photo-1447175008436-054170c2e979'),
     cta: 'Ver productos con castana',
-    href: '/?q=castanha#catalogo',
+    href: '/catalogo?q=castanha',
   },
   {
     nombre: 'Maracuja',
@@ -21,7 +21,7 @@ const INGREDIENTES = [
       'Conocida por sus propiedades calmantes y su aroma relajante, aporta una sensacion de bienestar y ayuda a equilibrar la piel. Un clasico de la cosmetica natural.',
     img: IMG('photo-1465146344425-f00d5f5c8f07'),
     cta: 'Ver productos con maracuja',
-    href: '/?q=maracuja#catalogo',
+    href: '/catalogo?q=maracuja',
   },
   {
     nombre: 'Andiroba',
@@ -30,7 +30,7 @@ const INGREDIENTES = [
       'Valorada por sus propiedades reconfortantes, es perfecta para momentos de relajacion y cuidado del cuerpo. Naturaleza al servicio de tu bienestar.',
     img: IMG('photo-1512496015851-a90fb38ba796'),
     cta: 'Ver productos con andiroba',
-    href: '/?q=andiroba#catalogo',
+    href: '/catalogo?q=andiroba',
   },
 ];
 

@@ -18,7 +18,7 @@ export function SiteHeader() {
   function buscar(e: React.FormEvent) {
     e.preventDefault();
     const query = q.trim();
-    router.push(query ? `/?q=${encodeURIComponent(query)}#catalogo` : '/#catalogo');
+    router.push(query ? `/catalogo?q=${encodeURIComponent(query)}` : '/catalogo');
   }
 
   return (
@@ -137,7 +137,7 @@ export function SiteHeader() {
       <nav className="hidden border-b border-sand bg-white lg:block">
         <div className="no-scrollbar mx-auto flex max-w-7xl items-center gap-1 overflow-x-auto px-4">
           <Link
-            href="/#catalogo"
+            href="/catalogo"
             className="whitespace-nowrap px-3 py-3 text-[13px] font-semibold text-forest hover:text-clay"
           >
             Todo el catalogo
@@ -145,7 +145,7 @@ export function SiteHeader() {
           {CATEGORIAS.map((c) => (
             <Link
               key={c}
-              href={`/?cat=${encodeURIComponent(c)}#catalogo`}
+              href={`/catalogo?cat=${encodeURIComponent(c)}`}
               className="whitespace-nowrap px-3 py-3 text-[13px] font-medium text-ink-soft transition hover:text-forest"
             >
               {c}
@@ -159,7 +159,7 @@ export function SiteHeader() {
         <div className="border-b border-sand bg-white lg:hidden">
           <div className="mx-auto grid max-w-7xl grid-cols-2 gap-1 px-4 py-3">
             <Link
-              href="/#catalogo"
+              href="/catalogo"
               onClick={() => setMenuAbierto(false)}
               className="rounded-lg px-3 py-2 text-sm font-semibold text-forest"
             >
@@ -168,7 +168,7 @@ export function SiteHeader() {
             {CATEGORIAS.map((c) => (
               <Link
                 key={c}
-                href={`/?cat=${encodeURIComponent(c)}#catalogo`}
+                href={`/catalogo?cat=${encodeURIComponent(c)}`}
                 onClick={() => setMenuAbierto(false)}
                 className="rounded-lg px-3 py-2 text-sm text-ink-soft"
               >

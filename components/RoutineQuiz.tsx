@@ -129,7 +129,7 @@ export function RoutineQuiz() {
                 {recomendadas.map((c) => (
                   <Link
                     key={c}
-                    href={`/?cat=${encodeURIComponent(c)}#catalogo`}
+                    href={`/catalogo?cat=${encodeURIComponent(c)}`}
                     className="rounded-full border border-forest bg-forest px-5 py-2.5 text-sm font-bold text-cream transition hover:bg-forest-deep"
                   >
                     {c}
@@ -139,7 +139,7 @@ export function RoutineQuiz() {
 
               <div className="mt-6 flex flex-wrap justify-center gap-3">
                 <Link
-                  href="/#catalogo"
+                  href="/catalogo"
                   className="rounded-full bg-clay px-6 py-3 text-sm font-extrabold text-white transition hover:brightness-110"
                 >
                   Ver catalogo completo

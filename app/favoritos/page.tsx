@@ -26,7 +26,7 @@ export default function FavoritosPage() {
         {favoritos.length === 0 ? (
           <div className="rounded-2xl bg-cream-card p-12 text-center text-ink-soft shadow-soft">
             <p className="mb-4">Aun no tienes favoritos.</p>
-            <Link href="/#catalogo" className="inline-block rounded-full bg-forest px-6 py-3 font-bold text-cream hover:bg-forest-deep">
+            <Link href="/catalogo" className="inline-block rounded-full bg-forest px-6 py-3 font-bold text-cream hover:bg-forest-deep">
               Ver productos
             </Link>
           </div>
