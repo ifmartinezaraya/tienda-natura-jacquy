@@ -154,8 +154,14 @@ export function ProductosAdmin() {
         .getPublicUrl(nombreArchivo);
       setForm((f) => ({ ...f, imagen_url: data.publicUrl }));
       mostrarAviso('Foto subida.');
-    } catch {
-      mostrarAviso('No se pudo subir la foto. Revisa el bucket "productos".');
+    } catch (err) {
+      const msg =
+        err && typeof err === 'object' && 'message' in err
+          ? String((err as { message: unknown }).message)
+          : 'error desconocido';
+      // eslint-disable-next-line no-console
+      console.error('Error al subir foto:', err);
+      mostrarAviso('No se pudo subir la foto: ' + msg);
     } finally {
       setSubiendo(false);
     }
