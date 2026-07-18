@@ -3,7 +3,7 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
 import type { Producto } from '@/lib/types';
 import { ProductCard } from '@/components/ProductCard';
-import { estiloCategoria, FRAGANCIA_CATS } from '@/lib/categorias';
+import { estiloCategoria, FRAGANCIA_CATS, etiquetaCategoria } from '@/lib/categorias';
 import { detectarGenero } from '@/lib/productoDetalle';
 import { CategoriaIcono } from '@/components/CategoriaIcono';
 
@@ -78,7 +78,7 @@ export function Catalogo({
             Explora
           </p>
           <h2 className="mt-1 font-serif text-2xl font-semibold text-ink">
-            Nuestras categorias
+            Nuestras categorías
           </h2>
         </div>
 
@@ -104,7 +104,7 @@ export function Catalogo({
                 </span>
                 <span className="min-w-0">
                   <span className="block truncate font-serif text-sm font-semibold">
-                    {c.nombre}
+                    {etiquetaCategoria(c.nombre)}
                   </span>
                   <span className={`text-xs ${activa ? 'text-cream/70' : 'text-ink-soft'}`}>
                     {c.cantidad} productos
@@ -144,7 +144,7 @@ export function Catalogo({
             {categorias.map((c) => (
               <CatChip
                 key={c.nombre}
-                label={c.nombre}
+                label={etiquetaCategoria(c.nombre)}
                 activo={categoria === c.nombre}
                 onClick={() => setCategoria(c.nombre)}
               />
@@ -166,8 +166,8 @@ export function Catalogo({
           <div className="mb-4 flex items-baseline justify-between">
             <h2 className="font-serif text-xl font-semibold text-ink">
               {mostrarGenero && genero
-                ? `${categoria} · ${genero === 'Ellas' ? 'Para ellas' : 'Para ellos'}`
-                : categoria || 'Todos los productos'}
+                ? `${etiquetaCategoria(categoria)} · ${genero === 'Ellas' ? 'Para ellas' : 'Para ellos'}`
+                : etiquetaCategoria(categoria) || 'Todos los productos'}
             </h2>
             <p className="text-sm text-ink-soft">
               {filtrados.length} {filtrados.length === 1 ? 'producto' : 'productos'}
@@ -177,7 +177,7 @@ export function Catalogo({
           {filtrados.length === 0 ? (
             <div className="rounded-2xl bg-cream-card p-12 text-center text-ink-soft shadow-soft">
               <h3 className="mb-1 font-serif text-lg text-ink">Sin resultados</h3>
-              <p>Prueba con otra busqueda o categoria.</p>
+              <p>Prueba con otra búsqueda o categoría.</p>
             </div>
           ) : (
             <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 sm:gap-4 lg:grid-cols-4">

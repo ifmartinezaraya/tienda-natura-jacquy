@@ -40,7 +40,7 @@ export default async function HomePage() {
         <div className="mx-auto max-w-6xl px-4 py-16 text-center">
           <div className="rounded-2xl bg-rose/10 p-8 text-rose-deep">
             <h2 className="font-serif text-lg">No se pudieron cargar los productos</h2>
-            <p className="mt-2 text-sm">Revisa la conexion con Supabase e intenta de nuevo.</p>
+            <p className="mt-2 text-sm">Revisa la conexión con Supabase e intenta de nuevo.</p>
           </div>
         </div>
       ) : (
@@ -53,7 +53,7 @@ export default async function HomePage() {
           {total > 0 && (
             <>
               <FeaturedProducts
-                eyebrow="Seleccion especial"
+                eyebrow="Selección especial"
                 titulo="Destacados de la temporada"
                 productos={destacados}
               />
@@ -64,10 +64,10 @@ export default async function HomePage() {
                   <div className="flex flex-col items-center gap-4 rounded-3xl bg-gradient-to-br from-forest-deep to-forest px-6 py-10 text-center text-cream sm:flex-row sm:justify-between sm:text-left">
                     <div>
                       <h2 className="font-serif text-2xl font-semibold sm:text-3xl">
-                        Descubre todo el catalogo
+                        Descubre todo el catálogo
                       </h2>
                       <p className="mt-1 text-sm text-[#E4DFCF]">
-                        {total} productos de cosmetica natural, con buscador y filtros por categoria.
+                        {total} productos de cosmética natural, con buscador y filtros por categoría.
                       </p>
                     </div>
                     <Link
@@ -84,7 +84,7 @@ export default async function HomePage() {
               <RoutineQuiz />
 
               <FeaturedProducts
-                eyebrow="Recien llegados"
+                eyebrow="Recién llegados"
                 titulo="Novedades"
                 productos={novedades}
               />

@@ -29,8 +29,8 @@ export const HERO_SLIDES: HeroSlide[] = [
     eyebrow: 'Consultora Natura · Productos originales',
     titulo: 'Belleza natural\npara tu piel',
     texto:
-      'Perfumeria, cuidado facial, corporal, cabello y maquillaje. Descubre tus favoritos.',
-    cta: 'Ver catalogo',
+      'Perfumería, cuidado facial, corporal, cabello y maquillaje. Descubre tus favoritos.',
+    cta: 'Ver catálogo',
     href: '/catalogo',
     // Banner vectorial propio (skincare). Reemplazable por tu banner autorizado de Natura.
     img: '/banners/hero-skincare.svg',
@@ -39,17 +39,17 @@ export const HERO_SLIDES: HeroSlide[] = [
     eyebrow: 'Ingredientes de la naturaleza',
     titulo: 'El cuidado que\ntu piel merece',
     texto:
-      'Formulas inspiradas en la biodiversidad para el bienestar de toda la familia.',
+      'Fórmulas inspiradas en la biodiversidad para el bienestar de toda la familia.',
     cta: 'Explorar productos',
     href: '/catalogo',
     img: '/banners/hero-botanica.svg',
   },
   {
-    eyebrow: 'Facil y cercano',
-    titulo: 'Pide facil\npor WhatsApp',
+    eyebrow: 'Fácil y cercano',
+    titulo: 'Pide fácil\npor WhatsApp',
     texto:
-      'Arma tu carrito y coordina la entrega en simples pasos. Atencion personalizada.',
-    cta: 'Escribenos',
+      'Arma tu carrito y coordina la entrega en simples pasos. Atención personalizada.',
+    cta: 'Escríbenos',
     href: 'WHATSAPP',
     img: '/banners/hero-perfume.svg',
   },
@@ -69,8 +69,8 @@ export type Promo = {
 
 export const PROMOS: Promo[] = [
   {
-    badge: 'Mas por menos',
-    titulo: 'Lleva mas y ahorra',
+    badge: 'Más por menos',
+    titulo: 'Lleva más y ahorra',
     destacado: 'Hasta 30% OFF',
     sub: 'En productos seleccionados',
     cta: 'Comprar',
@@ -81,7 +81,7 @@ export const PROMOS: Promo[] = [
   {
     badge: 'Especial repuestos',
     titulo: 'Recarga y cuida el planeta',
-    destacado: 'Lleva 3 o mas',
+    destacado: 'Lleva 3 o más',
     sub: 'Precios especiales en repuestos',
     cta: 'Ver repuestos',
     href: '/catalogo?cat=Repuestos',
@@ -92,7 +92,7 @@ export const PROMOS: Promo[] = [
     badge: 'Aromas',
     titulo: 'Encuentra tu aroma',
     destacado: 'Colonias y fragancias',
-    sub: 'Frescura que te acompana',
+    sub: 'Frescura que te acompaña',
     cta: 'Descubrir',
     href: '/catalogo?cat=Colonias',
     grad: 'from-[#7A5B8A] to-[#5B4570]',

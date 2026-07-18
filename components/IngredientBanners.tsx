@@ -3,28 +3,28 @@ import Link from 'next/link';
 // Contenido educativo original sobre ingredientes de origen natural.
 const INGREDIENTES = [
   {
-    nombre: 'Castana',
-    titulo: 'Nutricion intensa con Castana',
+    nombre: 'Castaña',
+    titulo: 'Nutrición intensa con Castaña',
     texto:
-      'Rica en aceites y nutrientes, ayuda a nutrir profundamente la piel dejandola suave y confortada. Ideal para pieles que buscan hidratacion y cuidado diario.',
+      'Rica en aceites y nutrientes, ayuda a nutrir profundamente la piel dejándola suave y confortada. Ideal para pieles que buscan hidratación y cuidado diario.',
     img: '/banners/ingrediente-castana.svg',
-    cta: 'Ver productos con castana',
+    cta: 'Ver productos con castaña',
     href: '/catalogo?q=castanha',
   },
   {
-    nombre: 'Maracuja',
-    titulo: 'Frescura y equilibrio con Maracuja',
+    nombre: 'Maracuyá',
+    titulo: 'Frescura y equilibrio con Maracuyá',
     texto:
-      'Conocida por sus propiedades calmantes y su aroma relajante, aporta una sensacion de bienestar y ayuda a equilibrar la piel. Un clasico de la cosmetica natural.',
+      'Conocida por sus propiedades calmantes y su aroma relajante, aporta una sensación de bienestar y ayuda a equilibrar la piel. Un clásico de la cosmética natural.',
     img: '/banners/ingrediente-maracuja.svg',
-    cta: 'Ver productos con maracuja',
+    cta: 'Ver productos con maracuyá',
     href: '/catalogo?q=maracuja',
   },
   {
     nombre: 'Andiroba',
     titulo: 'Bienestar corporal con Andiroba',
     texto:
-      'Valorada por sus propiedades reconfortantes, es perfecta para momentos de relajacion y cuidado del cuerpo. Naturaleza al servicio de tu bienestar.',
+      'Valorada por sus propiedades reconfortantes, es perfecta para momentos de relajación y cuidado del cuerpo. Naturaleza al servicio de tu bienestar.',
     img: '/banners/ingrediente-andiroba.svg',
     cta: 'Ver productos con andiroba',
     href: '/catalogo?q=andiroba',
@@ -37,7 +37,7 @@ export function IngredientBanners() {
       <div className="mx-auto max-w-7xl px-4 py-12">
         <div className="mb-8 text-center">
           <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-clay">
-            Conoce mas
+            Conoce más
           </p>
           <h2 className="mt-1 font-serif text-3xl font-semibold text-ink">
             Ingredientes que amamos

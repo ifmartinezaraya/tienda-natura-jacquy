@@ -2,12 +2,13 @@
 
 import Link from 'next/link';
 import { useState } from 'react';
+import { etiquetaCategoria } from '@/lib/categorias';
 
 type Opcion = { label: string; cats: string[] };
 
 const PREGUNTAS: { pregunta: string; clave: string; opciones: Opcion[] }[] = [
   {
-    pregunta: 'Como es tu piel?',
+    pregunta: '¿Cómo es tu piel?',
     clave: 'piel',
     opciones: [
       { label: 'Seca', cats: ['Cremas', 'Aceites', 'Cuidado Facial'] },
@@ -17,20 +18,20 @@ const PREGUNTAS: { pregunta: string; clave: string; opciones: Opcion[] }[] = [
     ],
   },
   {
-    pregunta: 'Como es tu cabello?',
+    pregunta: '¿Cómo es tu cabello?',
     clave: 'cabello',
     opciones: [
       { label: 'Seco', cats: ['Cabello', 'Shampoo'] },
       { label: 'Graso', cats: ['Shampoo'] },
       { label: 'Rizado', cats: ['Cabello', 'Cremas'] },
-      { label: 'Tenido', cats: ['Cabello', 'Shampoo'] },
+      { label: 'Teñido', cats: ['Cabello', 'Shampoo'] },
     ],
   },
   {
-    pregunta: 'Que buscas hoy?',
+    pregunta: '¿Qué buscas hoy?',
     clave: 'objetivo',
     opciones: [
-      { label: 'Hidratacion', cats: ['Cremas', 'Cuerpo'] },
+      { label: 'Hidratación', cats: ['Cremas', 'Cuerpo'] },
       { label: 'Limpieza', cats: ['Jabones', 'Cuidado Facial'] },
       { label: 'Aroma', cats: ['Colonias', 'Fragancias', 'Perfumeria'] },
       { label: 'Bienestar', cats: ['Aceites', 'Cuerpo'] },
@@ -69,13 +70,13 @@ export function RoutineQuiz() {
         <div className="rounded-3xl border border-sand/70 bg-cream-card p-8 shadow-soft sm:p-10">
           <div className="text-center">
             <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-clay">
-              Asesoria personalizada
+              Asesoría personalizada
             </p>
             <h2 className="mt-1 font-serif text-3xl font-semibold text-ink">
               Descubre tu rutina ideal
             </h2>
             <p className="mt-2 text-sm text-ink-soft">
-              Responde 3 preguntas y te recomendamos productos segun tu piel y cabello.
+              Responde 3 preguntas y te recomendamos productos según tu piel y cabello.
             </p>
           </div>
 
@@ -122,7 +123,7 @@ export function RoutineQuiz() {
                 Esto es lo que te recomendamos
               </h3>
               <p className="mt-1 text-sm text-ink-soft">
-                Segun tus respuestas, estas categorias son ideales para ti:
+                Según tus respuestas, estas categorías son ideales para ti:
               </p>
 
               <div className="mt-5 flex flex-wrap justify-center gap-2">
@@ -132,7 +133,7 @@ export function RoutineQuiz() {
                     href={`/catalogo?cat=${encodeURIComponent(c)}`}
                     className="rounded-full border border-forest bg-forest px-5 py-2.5 text-sm font-bold text-cream transition hover:bg-forest-deep"
                   >
-                    {c}
+                    {etiquetaCategoria(c)}
                   </Link>
                 ))}
               </div>
@@ -142,7 +143,7 @@ export function RoutineQuiz() {
                   href="/catalogo"
                   className="rounded-full bg-clay px-6 py-3 text-sm font-extrabold text-white transition hover:brightness-110"
                 >
-                  Ver catalogo completo
+                  Ver catálogo completo
                 </Link>
                 <button
                   onClick={reiniciar}

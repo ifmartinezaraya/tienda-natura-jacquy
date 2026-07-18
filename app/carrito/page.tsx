@@ -25,7 +25,7 @@ export default function CarritoPage() {
       return;
     }
     if (!telefono.trim()) {
-      setError('Escribe tu telefono de contacto.');
+      setError('Escribe tu teléfono de contacto.');
       return;
     }
 
@@ -57,7 +57,7 @@ export default function CarritoPage() {
       `${lineas.join('\n')}\n\n` +
       `TOTAL: ${formatCLP(totalPrecio)}\n\n` +
       `Nombre: ${cliente.trim()}\n` +
-      `Telefono: ${telefono.trim()}`;
+      `Teléfono: ${telefono.trim()}`;
 
     const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
       mensaje,
@@ -80,7 +80,7 @@ export default function CarritoPage() {
 
         {items.length === 0 ? (
           <div className="rounded-xl2 bg-cream-card p-12 text-center text-ink-soft shadow-soft">
-            <p className="mb-4">Tu carrito esta vacio.</p>
+            <p className="mb-4">Tu carrito está vacío.</p>
             <Link
               href="/"
               className="inline-block rounded-xl2 bg-forest px-5 py-3 font-bold text-white hover:bg-forest-deep"
@@ -144,7 +144,7 @@ export default function CarritoPage() {
             {/* Total */}
             <div className="mt-5 flex items-center justify-between rounded-xl2 bg-forest px-5 py-4 text-cream">
               <span className="text-sm font-semibold">
-                Total ({totalItems} {totalItems === 1 ? 'articulo' : 'articulos'})
+                Total ({totalItems} {totalItems === 1 ? 'artículo' : 'artículos'})
               </span>
               <span className="font-serif text-xl font-bold">
                 {formatCLP(totalPrecio)}
@@ -168,7 +168,7 @@ export default function CarritoPage() {
                 </div>
                 <div>
                   <label className="mb-1 block text-xs font-bold uppercase tracking-wide text-ink-soft">
-                    Telefono / WhatsApp
+                    Teléfono / WhatsApp
                   </label>
                   <input
                     value={telefono}
@@ -194,7 +194,7 @@ export default function CarritoPage() {
                 {enviando ? 'Preparando...' : 'Finalizar pedido por WhatsApp'}
               </button>
               <p className="mt-2 text-center text-xs text-ink-soft">
-                Se abrira WhatsApp con el detalle de tu pedido listo para enviar.
+                Se abrirá WhatsApp con el detalle de tu pedido listo para enviar.
               </p>
             </div>
 

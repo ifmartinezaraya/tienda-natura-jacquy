@@ -20,9 +20,9 @@ const manrope = Manrope({
 });
 
 export const metadata: Metadata = {
-  title: `${STORE_NAME} - Cosmetica natural`,
+  title: `${STORE_NAME} - Cosmética natural`,
   description:
-    'Tienda de productos naturales: perfumeria, cuidado facial, corporal, cabello y maquillaje.',
+    'Tienda de productos naturales: perfumería, cuidado facial, corporal, cabello y maquillaje.',
 };
 
 export default function RootLayout({

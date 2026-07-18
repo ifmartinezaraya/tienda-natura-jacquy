@@ -1,7 +1,7 @@
 const BENEFICIOS = [
   {
     titulo: 'Pedidos por WhatsApp',
-    texto: 'Rapido y con atencion personalizada',
+    texto: 'Rápido y con atención personalizada',
     icono: (
       <path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2z" />
     ),
@@ -20,7 +20,7 @@ const BENEFICIOS = [
   },
   {
     titulo: 'Productos originales Natura',
-    texto: 'Cosmetica natural de confianza',
+    texto: 'Cosmética natural de confianza',
     icono: (
       <>
         <path d="M12 2 4 5v6c0 5 3.4 9 8 11 4.6-2 8-6 8-11V5z" />
@@ -29,7 +29,7 @@ const BENEFICIOS = [
     ),
   },
   {
-    titulo: 'Atencion cercana',
+    titulo: 'Atención cercana',
     texto: 'Te ayudamos a elegir lo mejor',
     icono: (
       <>

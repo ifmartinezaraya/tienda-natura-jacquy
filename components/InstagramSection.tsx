@@ -20,7 +20,7 @@ export function InstagramSection() {
             Nuestra comunidad
           </p>
           <h2 className="mt-1 font-serif text-3xl font-semibold text-ink">
-            Siguenos en Instagram
+            Síguenos en Instagram
           </h2>
           <a
             href={INSTAGRAM_URL}

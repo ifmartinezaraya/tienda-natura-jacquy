@@ -33,9 +33,9 @@ export default async function CatalogoPage({
           <nav className="mb-2 text-xs text-[#C9BFA0]">
             <a href="/" className="hover:text-white">Inicio</a>
             <span className="mx-2">/</span>
-            <span>Catalogo</span>
+            <span>Catálogo</span>
           </nav>
-          <h1 className="font-serif text-3xl font-semibold sm:text-4xl">Catalogo</h1>
+          <h1 className="font-serif text-3xl font-semibold sm:text-4xl">Catálogo</h1>
           <p className="mt-1 text-sm text-[#E4DFCF]">
             Explora todos nuestros productos. Usa el buscador y los filtros para
             encontrar lo que necesitas.
@@ -47,7 +47,7 @@ export default async function CatalogoPage({
         <div className="mx-auto max-w-6xl px-4 py-16 text-center">
           <div className="rounded-2xl bg-rose/10 p-8 text-rose-deep">
             <h2 className="font-serif text-lg">No se pudieron cargar los productos</h2>
-            <p className="mt-2 text-sm">Revisa la conexion con Supabase e intenta de nuevo.</p>
+            <p className="mt-2 text-sm">Revisa la conexión con Supabase e intenta de nuevo.</p>
           </div>
         </div>
       ) : (

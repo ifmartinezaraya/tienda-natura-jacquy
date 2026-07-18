@@ -7,6 +7,7 @@ import { formatCLP } from '@/lib/format';
 import { useCart } from '@/components/CartProvider';
 import { ProductoImagen } from '@/components/ProductoImagen';
 import { FavoriteButton } from '@/components/FavoriteButton';
+import { etiquetaCategoria } from '@/lib/categorias';
 
 export function ProductCard({ producto }: { producto: Producto }) {
   const { agregar } = useCart();
@@ -42,7 +43,7 @@ export function ProductCard({ producto }: { producto: Producto }) {
 
       <div className="flex flex-1 flex-col p-4">
         <span className="text-[10px] font-semibold uppercase tracking-[0.12em] text-clay">
-          {producto.categoria}
+          {etiquetaCategoria(producto.categoria)}
         </span>
         <Link href={`/producto/${producto.id}`}>
           <h3 className="mt-1 line-clamp-2 min-h-[2.6rem] font-serif text-[15px] font-semibold leading-snug text-ink transition group-hover:text-forest">

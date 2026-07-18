@@ -52,3 +52,13 @@ export const CATEGORIAS = [
 
 // Categorias de fragancia (permiten filtrar por genero: para ellas / para ellos).
 export const FRAGANCIA_CATS = ['Perfumeria', 'Colonias', 'Fragancias'];
+
+
+// Etiqueta visible (con tilde) para mostrar la categoria, sin cambiar el dato interno.
+const ETIQUETAS: Record<string, string> = {
+  Perfumeria: 'Perfumería',
+};
+
+export function etiquetaCategoria(cat: string): string {
+  return ETIQUETAS[cat] ?? cat;
+}

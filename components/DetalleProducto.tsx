@@ -9,6 +9,7 @@ import { FavoriteButton } from '@/components/FavoriteButton';
 import { ProductoImagen } from '@/components/ProductoImagen';
 import { ProductCard } from '@/components/ProductCard';
 import { WHATSAPP_NUMBER } from '@/lib/config';
+import { etiquetaCategoria } from '@/lib/categorias';
 import {
   atributos,
   beneficios,
@@ -53,7 +54,7 @@ export function DetalleProducto({
           <Link href="/" className="hover:text-forest">Inicio</Link>
           <span className="mx-2">/</span>
           <Link href={`/catalogo?cat=${encodeURIComponent(producto.categoria)}`} className="hover:text-forest">
-            {producto.categoria}
+            {etiquetaCategoria(producto.categoria)}
           </Link>
           <span className="mx-2">/</span>
           <span className="text-ink">{producto.nombre}</span>
@@ -76,7 +77,7 @@ export function DetalleProducto({
         {/* Info */}
         <div className="flex flex-col">
           <span className="text-[11px] font-semibold uppercase tracking-[0.18em] text-clay">
-            {producto.categoria}
+            {etiquetaCategoria(producto.categoria)}
           </span>
           <h1 className="mt-1 font-serif text-3xl font-semibold leading-tight text-ink">
             {producto.nombre}
@@ -153,16 +154,16 @@ export function DetalleProducto({
             </p>
             <p className="mt-1">
               Coordinamos la entrega contigo por WhatsApp. Revisa{' '}
-              <Link href="/envios" className="underline hover:text-forest">envios y entregas</Link>.
+              <Link href="/envios" className="underline hover:text-forest">envíos y entregas</Link>.
             </p>
           </div>
 
           {/* Secciones desplegables */}
           <div className="mt-6 divide-y divide-sand border-t border-sand">
-            <Acordeon titulo="Descripcion" defaultOpen>
+            <Acordeon titulo="Descripción" defaultOpen>
               <p>{descripcion}</p>
             </Acordeon>
-            <Acordeon titulo="Como usar">
+            <Acordeon titulo="Cómo usar">
               <p>{comoUsar(producto.categoria)}</p>
             </Acordeon>
             <Acordeon titulo="Beneficios">
@@ -183,7 +184,7 @@ export function DetalleProducto({
       {relacionados.length > 0 && (
         <section className="mx-auto max-w-6xl px-4 py-10">
           <h2 className="mb-5 font-serif text-2xl font-semibold text-ink">
-            Tambien te puede gustar
+            También te puede gustar
           </h2>
           <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 sm:gap-4 lg:grid-cols-4">
             {relacionados.map((p) => (

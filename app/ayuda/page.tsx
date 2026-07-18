@@ -7,13 +7,13 @@ export default function AyudaPage() {
   return (
     <PaginaContenido
       titulo="Ayuda y contacto"
-      bajada="Estamos para ayudarte. Aqui encontraras respuestas a las dudas mas comunes."
+      bajada="Estamos para ayudarte. Aquí encontrarás respuestas a las dudas más comunes."
     >
-      <h2>Como hacer un pedido</h2>
+      <h2>Cómo hacer un pedido</h2>
       <ul>
-        <li>Explora el catalogo y agrega productos a tu carrito.</li>
+        <li>Explora el catálogo y agrega productos a tu carrito.</li>
         <li>Revisa tu carrito y toca "Finalizar pedido por WhatsApp".</li>
-        <li>Se abrira WhatsApp con el detalle listo para enviarnos.</li>
+        <li>Se abrirá WhatsApp con el detalle listo para enviarnos.</li>
         <li>Coordinamos contigo el pago y la entrega.</li>
       </ul>
 
@@ -25,23 +25,23 @@ export default function AyudaPage() {
 
       <h2>Contacto directo</h2>
       <p>
-        La forma mas rapida de comunicarte con nosotros es por WhatsApp:
+        La forma más rápida de comunicarte con nosotros es por WhatsApp:
       </p>
       <p>
         <a href={`https://wa.me/${WHATSAPP_NUMBER}`} target="_blank">
-          Escribenos por WhatsApp
+          Escríbenos por WhatsApp
         </a>
       </p>
       <p>
-        Horario de atencion: lunes a sabado. Te responderemos a la brevedad.
+        Horario de atención: lunes a sábado. Te responderemos a la brevedad.
       </p>
 
       <h2>Preguntas frecuentes</h2>
-      <h3>Los productos son originales?</h3>
-      <p>Si, trabajamos unicamente con productos originales.</p>
-      <h3>Puedo cambiar un producto?</h3>
+      <h3>¿Los productos son originales?</h3>
+      <p>Sí, trabajamos únicamente con productos originales.</p>
+      <h3>¿Puedo cambiar un producto?</h3>
       <p>
-        Escribenos y revisaremos tu caso segun nuestra politica de cambios y el
+        Escríbenos y revisaremos tu caso según nuestra política de cambios y el
         estado del producto.
       </p>
     </PaginaContenido>

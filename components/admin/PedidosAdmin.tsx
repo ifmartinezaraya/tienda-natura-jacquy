@@ -88,7 +88,7 @@ export function PedidosAdmin() {
       ) : filtrados.length === 0 ? (
         <div className="rounded-xl2 bg-cream-card p-12 text-center text-ink-soft shadow-soft">
           <h3 className="mb-1 font-serif text-lg text-ink">Sin pedidos</h3>
-          <p>Cuando un cliente finalice una compra, aparecera aqui.</p>
+          <p>Cuando un cliente finalice una compra, aparecerá aquí.</p>
         </div>
       ) : (
         <div className="space-y-3">

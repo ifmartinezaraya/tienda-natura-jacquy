@@ -38,7 +38,7 @@ export default async function AdminLayout({
           </p>
           <form action="/admin/logout" method="post" className="mt-4">
             <button className="rounded-xl2 bg-forest px-5 py-2.5 font-bold text-white">
-              Cerrar sesion
+              Cerrar sesión
             </button>
           </form>
         </div>

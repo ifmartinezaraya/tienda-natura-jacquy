@@ -4,6 +4,7 @@ import { useEffect, useMemo, useState, useRef } from 'react';
 import Image from 'next/image';
 import { createClient } from '@/lib/supabase/client';
 import { formatCLP } from '@/lib/format';
+import { etiquetaCategoria } from '@/lib/categorias';
 import type { Producto } from '@/lib/types';
 
 const CATEGORIAS = [
@@ -130,9 +131,9 @@ export function ProductosAdmin() {
     const stock = Number(form.stock);
     const min_stock = Number(form.min_stock);
     if (!Number.isFinite(precio) || precio < 0)
-      return mostrarAviso('Precio invalido.');
+      return mostrarAviso('Precio inválido.');
     if (!Number.isFinite(stock) || stock < 0)
-      return mostrarAviso('Cantidad invalida.');
+      return mostrarAviso('Cantidad inválida.');
 
     setGuardando(true);
     const payload = {
@@ -238,9 +239,9 @@ export function ProductosAdmin() {
           onChange={(e) => setFiltroCat(e.target.value)}
           className="rounded-xl2 border border-sand bg-cream-card px-3 py-2.5 outline-none focus:border-forest"
         >
-          <option value="">Todas las categorias</option>
+          <option value="">Todas las categorías</option>
           {CATEGORIAS.map((c) => (
-            <option key={c} value={c}>{c}</option>
+            <option key={c} value={c}>{etiquetaCategoria(c)}</option>
           ))}
         </select>
       </div>
@@ -274,7 +275,7 @@ export function ProductosAdmin() {
                     {p.nombre}
                   </p>
                   <p className="text-xs text-ink-soft">
-                    {p.categoria} - {formatCLP(p.precio)} - Stock: {p.stock}
+                    {etiquetaCategoria(p.categoria)} - {formatCLP(p.precio)} - Stock: {p.stock}
                   </p>
                   <div className="mt-1 flex flex-wrap gap-1">
                     {p.stock <= 0 && <Badge tono="rose">Agotado</Badge>}
@@ -365,7 +366,7 @@ export function ProductosAdmin() {
               />
             </Campo>
 
-            <Campo label="Descripcion (opcional)">
+            <Campo label="Descripción (opcional)">
               <textarea
                 value={form.descripcion}
                 onChange={(e) => setForm((f) => ({ ...f, descripcion: e.target.value }))}
@@ -375,14 +376,14 @@ export function ProductosAdmin() {
               />
             </Campo>
 
-            <Campo label="Categoria">
+            <Campo label="Categoría">
               <select
                 value={form.categoria}
                 onChange={(e) => setForm((f) => ({ ...f, categoria: e.target.value }))}
                 className="input"
               >
                 {CATEGORIAS.map((c) => (
-                  <option key={c} value={c}>{c}</option>
+                  <option key={c} value={c}>{etiquetaCategoria(c)}</option>
                 ))}
               </select>
             </Campo>
@@ -449,7 +450,7 @@ export function ProductosAdmin() {
         <Overlay onClose={() => setModal(null)}>
           <h2 className="font-serif text-xl text-ink">Eliminar producto</h2>
           <p className="mt-2 text-sm text-ink-soft">
-            Seguro que quieres eliminar <b>{aEliminar.nombre}</b>? Esta accion no
+            ¿Seguro que quieres eliminar <b>{aEliminar.nombre}</b>? Esta acción no
             se puede deshacer.
           </p>
           <div className="mt-4 flex gap-2">

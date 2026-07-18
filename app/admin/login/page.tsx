@@ -16,7 +16,7 @@ export default function LoginPage() {
     e.preventDefault();
     setError('');
     if (!email.trim() || !password) {
-      setError('Escribe tu correo y contrasena.');
+      setError('Escribe tu correo y contraseña.');
       return;
     }
     setCargando(true);
@@ -27,7 +27,7 @@ export default function LoginPage() {
     });
     if (error) {
       setCargando(false);
-      setError('Correo o contrasena incorrectos.');
+      setError('Correo o contraseña incorrectos.');
       return;
     }
     // Entrada exitosa -> al panel
@@ -42,10 +42,10 @@ export default function LoginPage() {
           {STORE_NAME}
         </p>
         <h1 className="mb-1 font-serif text-2xl font-semibold text-ink">
-          Panel de administracion
+          Panel de administración
         </h1>
         <p className="mb-5 text-sm text-ink-soft">
-          Ingresa con tu correo y contrasena.
+          Ingresa con tu correo y contraseña.
         </p>
 
         <form onSubmit={onSubmit} className="space-y-3">
@@ -64,14 +64,14 @@ export default function LoginPage() {
           </div>
           <div>
             <label className="mb-1 block text-xs font-bold uppercase tracking-wide text-ink-soft">
-              Contrasena
+              Contraseña
             </label>
             <input
               type="password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               autoComplete="current-password"
-              placeholder="Tu contrasena"
+              placeholder="Tu contraseña"
               className="w-full rounded-lg border border-sand bg-[#FCFBF8] px-3 py-2.5 outline-none focus:border-forest"
             />
           </div>

@@ -5,7 +5,7 @@ import { useRouter } from 'next/navigation';
 import { useState } from 'react';
 import { useCart } from '@/components/CartProvider';
 import { useFavorites } from '@/components/FavoritesProvider';
-import { CATEGORIAS } from '@/lib/categorias';
+import { CATEGORIAS, etiquetaCategoria } from '@/lib/categorias';
 import { STORE_NAME } from '@/lib/config';
 
 export function SiteHeader() {
@@ -59,7 +59,7 @@ export function SiteHeader() {
             <input
               value={q}
               onChange={(e) => setQ(e.target.value)}
-              placeholder="Que buscas hoy?"
+              placeholder="¿Qué buscas hoy?"
               className="w-full rounded-full border border-sand bg-white py-2.5 pl-4 pr-12 text-sm outline-none transition focus:border-forest"
             />
             <button
@@ -117,7 +117,7 @@ export function SiteHeader() {
           <input
             value={q}
             onChange={(e) => setQ(e.target.value)}
-            placeholder="Que buscas hoy?"
+            placeholder="¿Qué buscas hoy?"
             className="w-full rounded-full border border-sand bg-white py-2.5 pl-4 pr-12 text-sm outline-none focus:border-forest"
           />
           <button
@@ -140,7 +140,7 @@ export function SiteHeader() {
             href="/catalogo"
             className="whitespace-nowrap px-3 py-3 text-[13px] font-semibold text-forest hover:text-clay"
           >
-            Todo el catalogo
+            Todo el catálogo
           </Link>
           {CATEGORIAS.map((c) => (
             <Link
@@ -148,7 +148,7 @@ export function SiteHeader() {
               href={`/catalogo?cat=${encodeURIComponent(c)}`}
               className="whitespace-nowrap px-3 py-3 text-[13px] font-medium text-ink-soft transition hover:text-forest"
             >
-              {c}
+              {etiquetaCategoria(c)}
             </Link>
           ))}
         </div>
@@ -163,7 +163,7 @@ export function SiteHeader() {
               onClick={() => setMenuAbierto(false)}
               className="rounded-lg px-3 py-2 text-sm font-semibold text-forest"
             >
-              Todo el catalogo
+              Todo el catálogo
             </Link>
             {CATEGORIAS.map((c) => (
               <Link
@@ -172,7 +172,7 @@ export function SiteHeader() {
                 onClick={() => setMenuAbierto(false)}
                 className="rounded-lg px-3 py-2 text-sm text-ink-soft"
               >
-                {c}
+                {etiquetaCategoria(c)}
               </Link>
             ))}
           </div>

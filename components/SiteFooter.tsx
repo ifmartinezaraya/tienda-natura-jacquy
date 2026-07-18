@@ -8,7 +8,7 @@ export function SiteFooter() {
       <div className="mx-auto max-w-7xl px-4 pt-12 text-center">
         <p className="font-serif text-3xl font-semibold">{STORE_NAME}</p>
         <p className="mx-auto mt-2 max-w-md text-sm text-[#C9BFA0]">
-          Cosmetica natural para el cuidado de tu piel, cabello y bienestar.
+          Cosmética natural para el cuidado de tu piel, cabello y bienestar.
         </p>
       </div>
 
@@ -21,7 +21,7 @@ export function SiteFooter() {
           <ul className="mt-3 space-y-2 text-sm text-[#E4DFCF]">
             <li><Link href="/nosotros" className="hover:text-white">Sobre nosotros</Link></li>
             <li><Link href="/nosotros#sustentabilidad" className="hover:text-white">Sustentabilidad</Link></li>
-            <li><Link href="/catalogo" className="hover:text-white">Nuestro catalogo</Link></li>
+            <li><Link href="/catalogo" className="hover:text-white">Nuestro catálogo</Link></li>
           </ul>
         </div>
         <div>
@@ -30,7 +30,7 @@ export function SiteFooter() {
           </p>
           <ul className="mt-3 space-y-2 text-sm text-[#E4DFCF]">
             <li><Link href="/ayuda" className="hover:text-white">Ayuda y contacto</Link></li>
-            <li><Link href="/envios" className="hover:text-white">Envios y entregas</Link></li>
+            <li><Link href="/envios" className="hover:text-white">Envíos y entregas</Link></li>
             <li>
               <a href={`https://wa.me/${WHATSAPP_NUMBER}`} target="_blank" className="hover:text-white">
                 Escribir por WhatsApp
@@ -43,9 +43,9 @@ export function SiteFooter() {
             Soporte
           </p>
           <ul className="mt-3 space-y-2 text-sm text-[#E4DFCF]">
-            <li><Link href="/politicas/terminos" className="hover:text-white">Terminos y condiciones</Link></li>
-            <li><Link href="/politicas/privacidad" className="hover:text-white">Politicas de privacidad</Link></li>
-            <li><Link href="/admin" className="hover:text-white">Ingreso administracion</Link></li>
+            <li><Link href="/politicas/terminos" className="hover:text-white">Términos y condiciones</Link></li>
+            <li><Link href="/politicas/privacidad" className="hover:text-white">Políticas de privacidad</Link></li>
+            <li><Link href="/admin" className="hover:text-white">Ingreso administración</Link></li>
           </ul>
         </div>
       </div>
@@ -60,7 +60,7 @@ export function SiteFooter() {
             <div className="flex items-center gap-2 text-[#E4DFCF]">
               <PayTag>Efectivo</PayTag>
               <PayTag>Transferencia</PayTag>
-              <PayTag>Debito</PayTag>
+              <PayTag>Débito</PayTag>
             </div>
           </div>
 
@@ -79,7 +79,7 @@ export function SiteFooter() {
       </div>
 
       <div className="border-t border-white/10 py-4 text-center text-xs text-[#C9BFA0]">
-        © {new Date().getFullYear()} {STORE_NAME} · Cosmetica natural. Todos los derechos reservados.
+        © {new Date().getFullYear()} {STORE_NAME} · Cosmética natural. Todos los derechos reservados.
       </div>
     </footer>
   );

@@ -17,7 +17,7 @@ export function AdminNav({ email }: { email: string }) {
       <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-3 px-4 py-4">
         <div>
           <p className="text-[11px] uppercase tracking-[0.14em] text-[#C9BFA0]">
-            {STORE_NAME} - Administracion
+            {STORE_NAME} - Administración
           </p>
           <p className="text-xs text-[#D9D4C2]">{email}</p>
         </div>

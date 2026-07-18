@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { etiquetaCategoria } from '@/lib/categorias';
 
 // Album por categoria: ilustracion vectorial minimalista + enlace a esa categoria.
 const ALBUMES: { nombre: string; img: string; href: string }[] = [
@@ -21,7 +22,7 @@ export function QuickCategories() {
             Explora
           </p>
           <h2 className="mt-1 font-serif text-2xl font-semibold text-ink sm:text-3xl">
-            Compra por categoria
+            Compra por categoría
           </h2>
         </div>
 
@@ -39,7 +40,7 @@ export function QuickCategories() {
               <div className="absolute inset-0 bg-gradient-to-t from-black/65 via-black/10 to-transparent" />
               <div className="absolute inset-x-0 bottom-0 p-4">
                 <h3 className="font-serif text-lg font-semibold text-cream drop-shadow">
-                  {a.nombre}
+                  {etiquetaCategoria(a.nombre)}
                 </h3>
                 <span className="mt-1 inline-flex items-center gap-1 text-xs font-bold text-cream/90">
                   Ver productos <span aria-hidden>&rarr;</span>
