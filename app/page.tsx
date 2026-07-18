@@ -4,6 +4,8 @@ import { SiteFooter } from '@/components/SiteFooter';
 import { HeroCarousel } from '@/components/HeroCarousel';
 import { BenefitsStrip } from '@/components/BenefitsStrip';
 import { FeaturedProducts } from '@/components/FeaturedProducts';
+import { PromoCarousel } from '@/components/PromoCarousel';
+import { QuickCategories } from '@/components/QuickCategories';
 import { IngredientBanners } from '@/components/IngredientBanners';
 import { RoutineQuiz } from '@/components/RoutineQuiz';
 import { InstagramSection } from '@/components/InstagramSection';
@@ -50,6 +52,8 @@ export default async function HomePage({
         <>
           <HeroCarousel />
           <BenefitsStrip />
+          <PromoCarousel />
+          <QuickCategories />
 
           {productos.length === 0 ? (
             <div className="mx-auto max-w-6xl px-4 py-16 text-center text-ink-soft">
