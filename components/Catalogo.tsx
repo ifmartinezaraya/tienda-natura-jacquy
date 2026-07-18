@@ -5,6 +5,7 @@ import type { Producto } from '@/lib/types';
 import { ProductCard } from '@/components/ProductCard';
 import { estiloCategoria, FRAGANCIA_CATS } from '@/lib/categorias';
 import { detectarGenero } from '@/lib/productoDetalle';
+import { CategoriaIcono } from '@/components/CategoriaIcono';
 
 function normalizar(s: string): string {
   return s
@@ -99,13 +100,7 @@ export function Catalogo({
                   className="flex h-11 w-11 flex-none items-center justify-center rounded-full"
                   style={{ background: activa ? 'rgba(255,255,255,0.15)' : est.bg }}
                 >
-                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none"
-                    stroke={activa ? '#F3EFE3' : est.fg} strokeWidth="1.4"
-                    strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M12 21V8" />
-                    <path d="M12 12c0-2.4 1.9-4.3 4.3-4.3C16.3 10.1 14.4 12 12 12z" />
-                    <path d="M12 9c0-2.4-1.9-4.3-4.3-4.3C7.7 7.1 9.6 9 12 9z" />
-                  </svg>
+                  <CategoriaIcono nombre={c.nombre} color={activa ? '#F3EFE3' : est.fg} />
                 </span>
                 <span className="min-w-0">
                   <span className="block truncate font-serif text-sm font-semibold">
