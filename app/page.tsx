@@ -4,6 +4,9 @@ import { SiteFooter } from '@/components/SiteFooter';
 import { HeroCarousel } from '@/components/HeroCarousel';
 import { BenefitsStrip } from '@/components/BenefitsStrip';
 import { FeaturedProducts } from '@/components/FeaturedProducts';
+import { IngredientBanners } from '@/components/IngredientBanners';
+import { RoutineQuiz } from '@/components/RoutineQuiz';
+import { InstagramSection } from '@/components/InstagramSection';
 import { Newsletter } from '@/components/Newsletter';
 import { Catalogo } from '@/components/Catalogo';
 import type { Producto } from '@/lib/types';
@@ -71,6 +74,11 @@ export default async function HomePage({
                   initialCategoria={categoriaInicial}
                 />
               </div>
+
+              {/* Secciones educativas y dinamicas (debajo del catalogo) */}
+              <IngredientBanners />
+              <RoutineQuiz />
+              <InstagramSection />
             </>
           )}
 
