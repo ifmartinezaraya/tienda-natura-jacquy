@@ -30,9 +30,9 @@ export function HeroCarousel() {
         />
       ))}
 
-      {/* Overlay para legibilidad */}
-      <div className="absolute inset-0 bg-gradient-to-r from-forest-deep/95 via-forest-deep/75 to-forest-deep/25" />
-      <div className="absolute inset-0 bg-gradient-to-t from-forest-deep/70 via-transparent to-transparent sm:from-forest-deep/30" />
+      {/* Overlay suave solo para dar contraste al texto (respeta los colores calidos) */}
+      <div className="absolute inset-0 bg-gradient-to-r from-black/45 via-black/15 to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent sm:hidden" />
 
       {/* Contenido */}
       <div className="relative mx-auto flex h-full max-w-7xl items-center px-4">

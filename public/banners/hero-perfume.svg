@@ -1,49 +1,58 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice">
   <defs>
-    <linearGradient id="bg3" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#F1E7EC"/>
-      <stop offset="1" stop-color="#E5DAE6"/>
+    <linearGradient id="bgC" x1="0" y1="0" x2="1" y2="0.4">
+      <stop offset="0" stop-color="#5B2E4A"/>
+      <stop offset="0.55" stop-color="#9A5B76"/>
+      <stop offset="1" stop-color="#E0A9B4"/>
     </linearGradient>
-    <filter id="blur3" x="-40%" y="-40%" width="180%" height="180%">
-      <feGaussianBlur stdDeviation="70"/>
+    <filter id="softC" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="55"/>
     </filter>
-    <linearGradient id="liq3" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#C79A4E"/>
-      <stop offset="1" stop-color="#A9645F"/>
-    </linearGradient>
   </defs>
 
-  <rect width="1600" height="900" fill="url(#bg3)"/>
+  <rect width="1600" height="900" fill="url(#bgC)"/>
 
-  <g filter="url(#blur3)">
-    <circle cx="1240" cy="220" r="300" fill="#7A5B8A" opacity="0.4"/>
-    <circle cx="1410" cy="730" r="280" fill="#C98B87" opacity="0.5"/>
-    <circle cx="980" cy="640" r="220" fill="#C79A4E" opacity="0.3"/>
+  <g filter="url(#softC)" opacity="0.5">
+    <circle cx="1190" cy="240" r="240" fill="#E7B9C6"/>
+    <circle cx="1420" cy="700" r="220" fill="#B06E8A"/>
   </g>
 
-  <!-- frasco de perfume -->
-  <g stroke="#2B3D2E" stroke-opacity="0.4" stroke-width="3" stroke-linejoin="round">
-    <rect x="1095" y="440" width="210" height="240" rx="30" fill="#FFFFFF" fill-opacity="0.9"/>
-    <path d="M1095 560 h210 v90 a30 30 0 0 1 -30 30 h-150 a30 30 0 0 1 -30 -30 z" fill="url(#liq3)" stroke="none"/>
-    <rect x="1170" y="404" width="60" height="40" rx="6" fill="#F0E6D6"/>
-    <rect x="1158" y="352" width="84" height="56" rx="10" fill="#7A5B8A" stroke="none"/>
-    <rect x="1188" y="330" width="24" height="28" rx="6" fill="#7A5B8A" stroke="none"/>
+  <!-- escenario blanco organico -->
+  <g fill="#FBF4F0">
+    <ellipse cx="1190" cy="640" rx="500" ry="330" opacity="0.92"/>
+    <ellipse cx="1370" cy="560" rx="290" ry="230" opacity="0.55"/>
+  </g>
+
+  <!-- frascos de perfume -->
+  <g stroke="#3E2036" stroke-opacity="0.18" stroke-width="2">
+    <!-- flacon grande -->
+    <g>
+      <rect x="1080" y="400" width="200" height="260" rx="30" fill="#C98B87"/>
+      <rect x="1150" y="360" width="60" height="44" rx="8" fill="#E7C79A"/>
+      <rect x="1140" y="312" width="80" height="52" rx="12" fill="#7A3A64"/>
+      <rect x="1170" y="290" width="20" height="26" rx="6" fill="#7A3A64"/>
+    </g>
+    <!-- flacon delgado -->
+    <g>
+      <rect x="1320" y="440" width="96" height="220" rx="22" fill="#CBA6D0"/>
+      <rect x="1352" y="414" width="32" height="28" rx="6" fill="#9A5B76"/>
+      <rect x="1340" y="380" width="56" height="38" rx="10" fill="#5B2E4A"/>
+    </g>
   </g>
 
   <!-- ramita -->
-  <g transform="translate(1330 470) rotate(18)">
-    <path d="M0 0 q70 -20 150 -6" fill="none" stroke="#4C7A52" stroke-opacity="0.7" stroke-width="4" stroke-linecap="round"/>
+  <g transform="translate(980 360) rotate(-8)">
+    <path d="M0 0 q60 -18 130 -6" fill="none" stroke="#4C7A52" stroke-opacity="0.75" stroke-width="4" stroke-linecap="round"/>
     <g fill="#4C7A52" fill-opacity="0.85">
-      <ellipse cx="50" cy="-14" rx="26" ry="12" transform="rotate(-20 50 -14)"/>
-      <ellipse cx="95" cy="-16" rx="26" ry="12" transform="rotate(-16 95 -16)"/>
-      <ellipse cx="138" cy="-10" rx="24" ry="11" transform="rotate(-10 138 -10)"/>
+      <ellipse cx="44" cy="-12" rx="24" ry="11" transform="rotate(-20 44 -12)"/>
+      <ellipse cx="86" cy="-14" rx="24" ry="11" transform="rotate(-16 86 -14)"/>
+      <ellipse cx="124" cy="-8" rx="22" ry="10" transform="rotate(-10 124 -8)"/>
     </g>
   </g>
 
   <!-- destellos -->
-  <g stroke="#2B3D2E" stroke-opacity="0.3" stroke-width="3" stroke-linecap="round">
-    <path d="M920 300 v26 M907 313 h26"/>
-    <path d="M1450 340 v20 M1440 350 h20"/>
-    <path d="M980 780 v18 M971 789 h18"/>
+  <g stroke="#FBF4F0" stroke-opacity="0.7" stroke-width="3" stroke-linecap="round">
+    <path d="M910 300 v24 M898 312 h24"/>
+    <path d="M1490 360 v18 M1481 369 h18"/>
   </g>
 </svg>
