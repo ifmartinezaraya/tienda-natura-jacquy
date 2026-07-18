@@ -33,7 +33,7 @@ export const HERO_SLIDES: HeroSlide[] = [
     cta: 'Ver catalogo',
     href: '#catalogo',
     // Reemplaza por tu banner autorizado de Natura:
-    img: STOCK('photo-1522337660859-02fbefca4702'),
+    img: STOCK('photo-1502691876148-a84978e59af8'),
   },
   {
     eyebrow: 'Ingredientes de la naturaleza',
@@ -42,7 +42,7 @@ export const HERO_SLIDES: HeroSlide[] = [
       'Formulas inspiradas en la biodiversidad para el bienestar de toda la familia.',
     cta: 'Explorar productos',
     href: '#catalogo',
-    img: STOCK('photo-1596704017254-9b121068fb31'),
+    img: STOCK('photo-1524594152303-9fd13543fe6e'),
   },
   {
     eyebrow: 'Facil y cercano',
@@ -51,7 +51,7 @@ export const HERO_SLIDES: HeroSlide[] = [
       'Arma tu carrito y coordina la entrega en simples pasos. Atencion personalizada.',
     cta: 'Escribenos',
     href: 'WHATSAPP',
-    img: STOCK('photo-1487412720507-e7ab37603c6f'),
+    img: STOCK('photo-1447752875215-b2761acb3c5d'),
   },
 ];
 
