@@ -1,0 +1,44 @@
+<svg viewBox="0 0 800 600" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="ga" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#E7F0E6"/>
+      <stop offset="1" stop-color="#D9C7A2"/>
+    </linearGradient>
+    <filter id="fa" x="-40%" y="-40%" width="180%" height="180%"><feGaussianBlur stdDeviation="55"/></filter>
+    <radialGradient id="seed" cx="0.4" cy="0.35" r="0.8">
+      <stop offset="0" stop-color="#A9784A"/>
+      <stop offset="1" stop-color="#6E4A2A"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="800" height="600" fill="url(#ga)"/>
+
+  <g filter="url(#fa)" opacity="0.4">
+    <circle cx="180" cy="140" r="150" fill="#FFFFFF"/>
+    <circle cx="650" cy="470" r="180" fill="#B79B6E"/>
+    <circle cx="430" cy="330" r="150" fill="#8FB79E"/>
+  </g>
+
+  <!-- rama con hojas -->
+  <g transform="translate(150 90)">
+    <path d="M120 20 C70 150 80 320 170 470" fill="none" stroke="#2B3D2E" stroke-opacity="0.55" stroke-width="6" stroke-linecap="round"/>
+    <g fill="#4C7A52" fill-opacity="0.9">
+      <g transform="translate(100 110) rotate(-40)"><path d="M0 0 C40 -30 100 -30 140 0 C100 30 40 30 0 0 Z"/></g>
+      <g transform="translate(92 220) rotate(36)"><path d="M0 0 C40 -30 100 -30 140 0 C100 30 40 30 0 0 Z"/></g>
+      <g transform="translate(108 330) rotate(-34)"><path d="M0 0 C36 -28 92 -28 128 0 C92 28 36 28 0 0 Z"/></g>
+    </g>
+  </g>
+
+  <!-- semillas / frutos de andiroba -->
+  <g stroke="#4A3220" stroke-opacity="0.25" stroke-width="2">
+    <ellipse cx="470" cy="440" rx="70" ry="82" fill="url(#seed)"/>
+    <path d="M470 362 C452 400 452 470 470 520" fill="none" stroke="#5A3C24" stroke-opacity="0.4"/>
+    <ellipse cx="560" cy="470" rx="50" ry="60" fill="url(#seed)"/>
+    <path d="M560 414 C548 442 548 494 560 522" fill="none" stroke="#5A3C24" stroke-opacity="0.4"/>
+  </g>
+
+  <!-- gota de aceite -->
+  <g transform="translate(600 300)">
+    <path d="M0 0 C22 26 30 40 30 54 a30 30 0 0 1 -60 0 C-30 40 -22 26 0 0 Z" fill="#E7C77A" fill-opacity="0.85" stroke="#B08B4F" stroke-opacity="0.3" stroke-width="2"/>
+  </g>
+</svg>

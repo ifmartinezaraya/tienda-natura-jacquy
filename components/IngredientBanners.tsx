@@ -28,7 +28,7 @@ const INGREDIENTES = [
     titulo: 'Bienestar corporal con Andiroba',
     texto:
       'Valorada por sus propiedades reconfortantes, es perfecta para momentos de relajacion y cuidado del cuerpo. Naturaleza al servicio de tu bienestar.',
-    img: IMG('photo-1512496015851-a90fb38ba796'),
+    img: '/banners/ingrediente-andiroba.svg',
     cta: 'Ver productos con andiroba',
     href: '/catalogo?q=andiroba',
   },
