@@ -10,11 +10,11 @@ export default function PrivacidadPage() {
       bajada="Como tratamos y protegemos tus datos personales, conforme a la ley chilena."
     >
       <p>
-        <strong>Aviso:</strong> plantilla referencial redactada conforme a la Ley
-        N&deg; 19.628 sobre Proteccion de la Vida Privada y a la Ley N&deg; 21.719
-        que moderniza el regimen de proteccion de datos en Chile. No constituye
-        asesoria legal. Completa los campos entre corchetes y hazla revisar por
-        un(a) profesional antes de publicarla.
+        <strong>Aviso:</strong> documento elaborado conforme a la Ley N&deg;
+        19.628 sobre Proteccion de la Vida Privada y a la Ley N&deg; 21.719 que
+        moderniza el regimen de proteccion de datos en Chile. Tiene caracter
+        informativo y no constituye asesoria legal; ante situaciones
+        particulares, recomendamos consultar a un(a) profesional.
       </p>
 
       <h2>1. Responsable del tratamiento</h2>
@@ -22,10 +22,10 @@ export default function PrivacidadPage() {
         El responsable del tratamiento de tus datos personales es {STORE_NAME}:
       </p>
       <ul>
-        <li>Nombre o razon social: [NOMBRE / RAZON SOCIAL]</li>
-        <li>RUT: [RUT]</li>
-        <li>Domicilio: [DIRECCION, COMUNA, CIUDAD]</li>
-        <li>Correo para asuntos de datos: [CORREO]</li>
+        <li>Nombre: Ignacio Martinez Araya</li>
+        <li>RUT: 20.776.107-9</li>
+        <li>Domicilio: Williamson 392</li>
+        <li>Correo para asuntos de datos: ifmartinezaraya@gmail.com</li>
       </ul>
 
       <h2>2. Datos que tratamos</h2>
@@ -79,9 +79,10 @@ export default function PrivacidadPage() {
         Como titular de los datos, la ley te reconoce los derechos de{' '}
         <strong>acceso, rectificacion, cancelacion (supresion) y oposicion</strong>,
         ademas de poder revocar tu consentimiento y oponerte al envio de
-        comunicaciones comerciales. Para ejercerlos, escribenos a [CORREO]
-        indicando tu solicitud; podremos pedirte antecedentes para verificar tu
-        identidad. Responderemos dentro de los plazos legales.
+        comunicaciones comerciales. Para ejercerlos, escribenos a
+        ifmartinezaraya@gmail.com indicando tu solicitud; podremos pedirte
+        antecedentes para verificar tu identidad. Responderemos dentro de los
+        plazos legales.
       </p>
 
       <h2>9. Seguridad</h2>
@@ -115,12 +116,12 @@ export default function PrivacidadPage() {
       <h2>13. Contacto y reclamos</h2>
       <p>
         Para ejercer tus derechos o realizar consultas sobre el tratamiento de
-        tus datos, escribenos a [CORREO]. Tambien puedes recurrir a la autoridad
-        competente en materia de proteccion de datos personales y, en materia de
-        consumo, al Servicio Nacional del Consumidor (SERNAC).
+        tus datos, escribenos a ifmartinezaraya@gmail.com. Tambien puedes recurrir
+        a la autoridad competente en materia de proteccion de datos personales y,
+        en materia de consumo, al Servicio Nacional del Consumidor (SERNAC).
       </p>
 
-      <p><strong>Ultima actualizacion:</strong> [COMPLETAR FECHA].</p>
+      <p><strong>Ultima actualizacion:</strong> 17 de julio de 2026.</p>
     </PaginaContenido>
   );
 }

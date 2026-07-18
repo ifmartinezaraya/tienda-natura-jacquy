@@ -10,12 +10,10 @@ export default function TerminosPage() {
       bajada="Condiciones generales de contratacion, conforme a la legislacion vigente en Chile."
     >
       <p>
-        <strong>Aviso:</strong> este documento es una plantilla referencial
-        redactada conforme a la normativa chilena aplicable al comercio
-        electronico y la proteccion del consumidor. No constituye asesoria legal.
-        Completa los campos entre corchetes con tus datos reales y, de ser
-        posible, hazlo revisar por un(a) profesional antes de su publicacion
-        definitiva.
+        <strong>Aviso:</strong> este documento fue elaborado conforme a la
+        normativa chilena aplicable al comercio electronico y la proteccion del
+        consumidor. Tiene caracter informativo y no constituye asesoria legal;
+        ante situaciones particulares, recomendamos consultar a un(a) profesional.
       </p>
 
       <h2>1. Identificacion del proveedor</h2>
@@ -24,11 +22,11 @@ export default function TerminosPage() {
         Proveedor&quot; o &quot;la Tienda&quot;):
       </p>
       <ul>
-        <li>Nombre o razon social: [NOMBRE / RAZON SOCIAL]</li>
-        <li>RUT: [RUT]</li>
-        <li>Domicilio: [DIRECCION, COMUNA, CIUDAD]</li>
-        <li>Correo de contacto: [CORREO]</li>
-        <li>Telefono / WhatsApp: [TELEFONO]</li>
+        <li>Nombre: Ignacio Martinez Araya</li>
+        <li>RUT: 20.776.107-9</li>
+        <li>Domicilio: Williamson 392</li>
+        <li>Correo de contacto: ifmartinezaraya@gmail.com</li>
+        <li>Telefono / WhatsApp: +56 9 6374 3589</li>
       </ul>
 
       <h2>2. Ambito y aceptacion</h2>
@@ -152,11 +150,11 @@ export default function TerminosPage() {
 
       <h2>16. Contacto</h2>
       <p>
-        Para consultas sobre estos Terminos, escribenos a [CORREO] o por
-        WhatsApp a [TELEFONO].
+        Para consultas sobre estos Terminos, escribenos a
+        ifmartinezaraya@gmail.com o por WhatsApp a +56 9 6374 3589.
       </p>
 
-      <p><strong>Ultima actualizacion:</strong> [COMPLETAR FECHA].</p>
+      <p><strong>Ultima actualizacion:</strong> 17 de julio de 2026.</p>
     </PaginaContenido>
   );
 }
