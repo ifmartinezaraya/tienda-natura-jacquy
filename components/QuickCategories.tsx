@@ -1,19 +1,15 @@
 import Link from 'next/link';
 
-const IMG = (id: string) =>
-  `https://images.unsplash.com/${id}?w=700&q=72&auto=format&fit=crop`;
-
-// Album por categoria: imagen + enlace a los productos de esa categoria.
-// (Imagenes libres de derechos; reemplazables por material autorizado de Natura.)
+// Album por categoria: ilustracion vectorial minimalista + enlace a esa categoria.
 const ALBUMES: { nombre: string; img: string; href: string }[] = [
-  { nombre: 'Cuidado Facial', img: IMG('photo-1526758097130-bab247274f58'), href: '/?cat=Cuidado%20Facial#catalogo' },
-  { nombre: 'Perfumeria', img: IMG('photo-1570172619644-dfd03ed5d881'), href: '/?cat=Perfumeria#catalogo' },
-  { nombre: 'Maquillaje', img: IMG('photo-1519415387722-a1c3bbef716c'), href: '/?cat=Maquillaje#catalogo' },
-  { nombre: 'Cabello', img: IMG('photo-1620916566398-39f1143ab7be'), href: '/?cat=Cabello#catalogo' },
-  { nombre: 'Cremas', img: IMG('photo-1556228578-8c89e6adf883'), href: '/?cat=Cremas#catalogo' },
-  { nombre: 'Colonias', img: IMG('photo-1541643600914-78b084683601'), href: '/?cat=Colonias#catalogo' },
-  { nombre: 'Jabones', img: IMG('photo-1596462502278-27bfdc403348'), href: '/?cat=Jabones#catalogo' },
-  { nombre: 'Desodorantes', img: IMG('photo-1620916297397-a4a5402a3c6c'), href: '/?cat=Desodorantes#catalogo' },
+  { nombre: 'Cuidado Facial', img: '/banners/cat/facial.svg', href: '/?cat=Cuidado%20Facial#catalogo' },
+  { nombre: 'Perfumeria', img: '/banners/cat/perfumeria.svg', href: '/?cat=Perfumeria#catalogo' },
+  { nombre: 'Maquillaje', img: '/banners/cat/maquillaje.svg', href: '/?cat=Maquillaje#catalogo' },
+  { nombre: 'Cabello', img: '/banners/cat/cabello.svg', href: '/?cat=Cabello#catalogo' },
+  { nombre: 'Cremas', img: '/banners/cat/cremas.svg', href: '/?cat=Cremas#catalogo' },
+  { nombre: 'Colonias', img: '/banners/cat/colonias.svg', href: '/?cat=Colonias#catalogo' },
+  { nombre: 'Jabones', img: '/banners/cat/jabones.svg', href: '/?cat=Jabones#catalogo' },
+  { nombre: 'Desodorantes', img: '/banners/cat/desodorantes.svg', href: '/?cat=Desodorantes#catalogo' },
 ];
 
 export function QuickCategories() {
@@ -40,7 +36,7 @@ export function QuickCategories() {
                 className="absolute inset-0 bg-cover bg-center transition duration-500 group-hover:scale-105"
                 style={{ backgroundImage: `url("${a.img}")` }}
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-forest-deep/85 via-forest-deep/20 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/65 via-black/10 to-transparent" />
               <div className="absolute inset-x-0 bottom-0 p-4">
                 <h3 className="font-serif text-lg font-semibold text-cream drop-shadow">
                   {a.nombre}

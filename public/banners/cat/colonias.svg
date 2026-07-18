@@ -1,0 +1,16 @@
+<svg viewBox="0 0 800 1000" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#DCE8EA"/><stop offset="1" stop-color="#B6CFD3"/></linearGradient>
+    <filter id="b" x="-40%" y="-40%" width="180%" height="180%"><feGaussianBlur stdDeviation="45"/></filter>
+  </defs>
+  <rect width="800" height="1000" fill="url(#g)"/>
+  <g filter="url(#b)" opacity="0.45"><circle cx="230" cy="220" r="170" fill="#FFFFFF"/><circle cx="620" cy="770" r="200" fill="#6FA0A8"/></g>
+  <ellipse cx="400" cy="430" rx="250" ry="250" fill="#F7FBFB" opacity="0.85"/>
+  <g stroke="#254347" stroke-opacity="0.14" stroke-width="2">
+    <rect x="332" y="380" width="136" height="200" rx="24" fill="#CFE0E2"/>
+    <path d="M332 500 h136 v56 a24 24 0 0 1 -24 24 h-88 a24 24 0 0 1 -24 -24 z" fill="#9FC2C6" stroke="none"/>
+    <rect x="378" y="344" width="44" height="40" rx="6" fill="#E6F0F1"/>
+    <rect x="366" y="300" width="68" height="46" rx="12" fill="#3E6B72" stroke="none"/>
+    <rect x="392" y="282" width="16" height="20" rx="5" fill="#3E6B72" stroke="none"/>
+  </g>
+</svg>
