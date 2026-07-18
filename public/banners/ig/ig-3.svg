@@ -1,0 +1,15 @@
+<svg viewBox="0 0 600 600" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="g3" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#EADCEB"/><stop offset="1" stop-color="#C6AECC"/></linearGradient>
+    <filter id="b3" x="-40%" y="-40%" width="180%" height="180%"><feGaussianBlur stdDeviation="42"/></filter>
+  </defs>
+  <rect width="600" height="600" fill="url(#g3)"/>
+  <g filter="url(#b3)" opacity="0.4"><circle cx="130" cy="120" r="140" fill="#FFFFFF"/><circle cx="470" cy="500" r="160" fill="#7A5B8A"/></g>
+  <circle cx="300" cy="300" r="170" fill="#FBF7FB" opacity="0.85"/>
+  <g stroke="#3E2036" stroke-opacity="0.15" stroke-width="2">
+    <rect x="245" y="250" width="110" height="160" rx="24" fill="#CBA6D0"/>
+    <rect x="282" y="212" width="36" height="40" rx="6" fill="#EBDBEC"/>
+    <rect x="268" y="166" width="64" height="48" rx="12" fill="#7A3A64" stroke="none"/>
+    <rect x="292" y="146" width="16" height="22" rx="5" fill="#7A3A64" stroke="none"/>
+  </g>
+</svg>

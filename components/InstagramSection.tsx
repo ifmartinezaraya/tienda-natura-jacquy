@@ -1,16 +1,14 @@
-const IMG = (id: string) =>
-  `https://images.unsplash.com/${id}?w=600&q=70&auto=format&fit=crop`;
-
 const INSTAGRAM_URL = 'https://www.instagram.com/naturabyjacqueline/';
 
-// Imagenes de muestra (reemplazables por tus propias publicaciones).
+// Ilustraciones vectoriales propias (sin marcas de terceros).
+// Reemplazables por tus propias publicaciones cuando quieras.
 const POSTS = [
-  IMG('photo-1556228578-8c89e6adf883'),
-  IMG('photo-1596462502278-27bfdc403348'),
-  IMG('photo-1620916566398-39f1143ab7be'),
-  IMG('photo-1608248597279-f99d160bfcbc'),
-  IMG('photo-1585652757173-57de5e9fab42'),
-  IMG('photo-1611930022073-b7a4ba5fcccd'),
+  '/banners/ig/ig-1.svg',
+  '/banners/ig/ig-2.svg',
+  '/banners/ig/ig-3.svg',
+  '/banners/ig/ig-4.svg',
+  '/banners/ig/ig-5.svg',
+  '/banners/ig/ig-6.svg',
 ];
 
 export function InstagramSection() {

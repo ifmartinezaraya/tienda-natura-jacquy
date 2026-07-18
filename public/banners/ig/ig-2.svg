@@ -1,0 +1,17 @@
+<svg viewBox="0 0 600 600" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="g2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#E7F0E6"/><stop offset="1" stop-color="#BBD4C2"/></linearGradient>
+    <filter id="b2" x="-40%" y="-40%" width="180%" height="180%"><feGaussianBlur stdDeviation="42"/></filter>
+  </defs>
+  <rect width="600" height="600" fill="url(#g2)"/>
+  <g filter="url(#b2)" opacity="0.4"><circle cx="130" cy="120" r="140" fill="#FFFFFF"/><circle cx="470" cy="500" r="160" fill="#4C7A52"/></g>
+  <circle cx="300" cy="300" r="170" fill="#FBFDF9" opacity="0.85"/>
+  <g transform="translate(230 150)">
+    <path d="M70 20 C30 150 40 300 120 430" fill="none" stroke="#2B3D2E" stroke-opacity="0.55" stroke-width="6" stroke-linecap="round"/>
+    <g fill="#4C7A52" fill-opacity="0.9">
+      <g transform="translate(56 100) rotate(-40)"><path d="M0 0 C34 -26 86 -26 120 0 C86 26 34 26 0 0 Z"/></g>
+      <g transform="translate(50 210) rotate(36)"><path d="M0 0 C34 -26 86 -26 120 0 C86 26 34 26 0 0 Z"/></g>
+      <g transform="translate(66 310) rotate(-34)"><path d="M0 0 C32 -24 82 -24 114 0 C82 24 32 24 0 0 Z"/></g>
+    </g>
+  </g>
+</svg>

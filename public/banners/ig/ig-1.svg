@@ -1,0 +1,16 @@
+<svg viewBox="0 0 600 600" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F3E3DD"/><stop offset="1" stop-color="#DDB6AE"/></linearGradient>
+    <filter id="b1" x="-40%" y="-40%" width="180%" height="180%"><feGaussianBlur stdDeviation="42"/></filter>
+  </defs>
+  <rect width="600" height="600" fill="url(#g1)"/>
+  <g filter="url(#b1)" opacity="0.4"><circle cx="130" cy="120" r="140" fill="#FFFFFF"/><circle cx="470" cy="500" r="160" fill="#A9645F"/></g>
+  <circle cx="300" cy="300" r="170" fill="#FBF4F1" opacity="0.85"/>
+  <g stroke="#7A2E3A" stroke-opacity="0.15" stroke-width="2">
+    <rect x="250" y="260" width="100" height="150" rx="26" fill="#E9D4CF"/>
+    <path d="M250 340 h100 v44 a26 26 0 0 1 -26 26 h-48 a26 26 0 0 1 -26 -26 z" fill="#D98A86" stroke="none"/>
+    <rect x="282" y="234" width="36" height="28" rx="6" fill="#EDDCD8"/>
+    <rect x="270" y="204" width="60" height="34" rx="12" fill="#A9645F" stroke="none"/>
+  </g>
+  <g transform="translate(348 270) rotate(26)"><path d="M0 0 C34 -26 86 -26 120 0 C86 26 34 26 0 0 Z" fill="#4C7A52" fill-opacity="0.8"/></g>
+</svg>
