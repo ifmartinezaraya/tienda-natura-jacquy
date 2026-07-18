@@ -22,10 +22,23 @@ export default async function ProductoPage({
 
   if (!data) notFound();
 
+  const producto = data as Producto;
+
+  // Productos relacionados: misma categoria, distinto id
+  const { data: rel } = await supabase
+    .from('productos')
+    .select('*')
+    .eq('activo', true)
+    .eq('categoria', producto.categoria)
+    .neq('id', producto.id)
+    .limit(4);
+
+  const relacionados = (rel ?? []) as Producto[];
+
   return (
     <main className="min-h-screen">
       <SiteHeader />
-      <DetalleProducto producto={data as Producto} />
+      <DetalleProducto producto={producto} relacionados={relacionados} />
       <SiteFooter />
     </main>
   );
