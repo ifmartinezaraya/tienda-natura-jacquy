@@ -115,10 +115,12 @@ export function CategoriaIcono({
   nombre,
   color,
   size = 22,
+  strokeWidth = 1.5,
 }: {
   nombre: string;
   color: string;
   size?: number;
+  strokeWidth?: number;
 }) {
   return (
     <svg
@@ -127,7 +129,7 @@ export function CategoriaIcono({
       viewBox="0 0 24 24"
       fill="none"
       stroke={color}
-      strokeWidth="1.5"
+      strokeWidth={strokeWidth}
       strokeLinecap="round"
       strokeLinejoin="round"
     >

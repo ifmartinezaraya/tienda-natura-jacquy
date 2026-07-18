@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { useRef } from 'react';
 import { PROMOS } from '@/lib/banners';
+import { CategoriaIcono } from '@/components/CategoriaIcono';
 
 export function PromoCarousel() {
   const ref = useRef<HTMLDivElement>(null);
@@ -32,24 +33,17 @@ export function PromoCarousel() {
           {PROMOS.map((p) => (
             <div
               key={p.titulo}
-              className={`relative flex min-h-[320px] w-[280px] flex-none snap-start flex-col justify-between overflow-hidden rounded-3xl p-6 text-cream ${p.img ? 'bg-forest-deep' : `bg-gradient-to-br ${p.grad}`}`}
+              className={`relative flex min-h-[320px] w-[280px] flex-none snap-start flex-col justify-between overflow-hidden rounded-3xl bg-gradient-to-br ${p.grad} p-6 text-cream`}
             >
-              {/* Imagen del nicho de fondo (minimalista) */}
-              {p.img && (
-                <>
-                  <div className="absolute inset-0 bg-cover bg-center transition duration-700" style={{ backgroundImage: `url("${p.img}")` }} />
-                  <div className="absolute inset-0 bg-gradient-to-t from-forest-deep/92 via-forest-deep/35 to-forest-deep/5" />
-                </>
-              )}
-              {!p.img && (
-                <>
-                  <div className="pointer-events-none absolute -right-10 -top-10 h-40 w-40 rounded-full bg-white/10" />
-                  <div className="pointer-events-none absolute -bottom-12 -left-8 h-36 w-36 rounded-full bg-black/10" />
-                </>
-              )}
+              {/* Decoracion suave */}
+              <div className="pointer-events-none absolute -right-12 -top-12 h-40 w-40 rounded-full bg-white/10" />
+              {/* Ilustracion minimalista de marca de agua */}
+              <div className="pointer-events-none absolute -bottom-5 right-2 opacity-20">
+                <CategoriaIcono nombre={p.icono} color="#FFFFFF" size={168} strokeWidth={1} />
+              </div>
 
               <div className="relative">
-                <span className="inline-block rounded-full bg-black/30 px-3 py-1 text-[11px] font-extrabold uppercase tracking-wide backdrop-blur-sm">
+                <span className="inline-block rounded-full bg-black/25 px-3 py-1 text-[11px] font-extrabold uppercase tracking-wide backdrop-blur-sm">
                   {p.badge}
                 </span>
               </div>

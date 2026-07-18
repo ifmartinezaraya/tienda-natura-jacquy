@@ -63,12 +63,9 @@ export type Promo = {
   cta: string;
   href: string;
   grad: string;
-  // Opcional: si pones una imagen autorizada, se usa de fondo.
-  img?: string;
+  // Motivo (categoria) para el icono minimalista de marca de agua.
+  icono: string;
 };
-
-const PIMG = (id: string) =>
-  `https://images.unsplash.com/${id}?w=800&q=75&auto=format&fit=crop`;
 
 export const PROMOS: Promo[] = [
   {
@@ -79,7 +76,7 @@ export const PROMOS: Promo[] = [
     cta: 'Comprar',
     href: '/#catalogo',
     grad: 'from-[#C56B3E] to-[#A9645F]',
-    img: PIMG('photo-1611251135345-18c56206b863'),
+    icono: 'Accesorios',
   },
   {
     badge: 'Especial repuestos',
@@ -89,7 +86,7 @@ export const PROMOS: Promo[] = [
     cta: 'Ver repuestos',
     href: '/?cat=Repuestos#catalogo',
     grad: 'from-forest to-forest-light',
-    img: PIMG('photo-1512496015851-a90fb38ba796'),
+    icono: 'Repuestos',
   },
   {
     badge: 'Aromas',
@@ -99,7 +96,7 @@ export const PROMOS: Promo[] = [
     cta: 'Descubrir',
     href: '/?cat=Colonias#catalogo',
     grad: 'from-[#7A5B8A] to-[#5B4570]',
-    img: PIMG('photo-1541643600914-78b084683601'),
+    icono: 'Colonias',
   },
   {
     badge: 'Cuidado facial',
@@ -109,7 +106,7 @@ export const PROMOS: Promo[] = [
     cta: 'Ver skincare',
     href: '/?cat=Cuidado%20Facial#catalogo',
     grad: 'from-[#C98B87] to-[#A9645F]',
-    img: PIMG('photo-1615397349754-cfa2066a298e'),
+    icono: 'Cuidado Facial',
   },
   {
     badge: 'Cabello',
@@ -119,6 +116,6 @@ export const PROMOS: Promo[] = [
     cta: 'Ver cabello',
     href: '/?cat=Cabello#catalogo',
     grad: 'from-[#C79A4E] to-[#8A6B3E]',
-    img: PIMG('photo-1522338242992-e1a54906a8da'),
+    icono: 'Cabello',
   },
 ];
