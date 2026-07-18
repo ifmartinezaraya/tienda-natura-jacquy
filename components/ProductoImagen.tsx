@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import { estiloCategoria } from '@/lib/categorias';
+import { CategoriaIcono } from '@/components/CategoriaIcono';
 
 // Muestra la foto del producto o, si no tiene, un placeholder elegante
 // con un motivo botanico teñido segun la categoria.
@@ -35,27 +36,16 @@ export function ProductoImagen({
     <div
       className="flex h-full w-full items-center justify-center"
       style={{
-        background: `radial-gradient(circle at 50% 35%, #ffffff 0%, ${bg} 70%)`,
+        background: `radial-gradient(circle at 50% 35%, #ffffff 0%, ${bg} 72%)`,
       }}
     >
-      {/* Motivo botanico (rama) */}
-      <svg
-        width="46%"
-        height="46%"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke={fg}
-        strokeWidth="1"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        opacity="0.5"
-      >
-        <path d="M12 21V7" />
-        <path d="M12 12c0-2.5 2-4.5 4.5-4.5C16.5 10 14.5 12 12 12z" />
-        <path d="M12 9c0-2.5-2-4.5-4.5-4.5C7.5 7 9.5 9 12 9z" />
-        <path d="M12 16c0-2 1.6-3.6 3.6-3.6C15.6 14.4 14 16 12 16z" />
-        <path d="M12 16c0-2-1.6-3.6-3.6-3.6C8.4 14.4 10 16 12 16z" />
-      </svg>
+      {/* Icono minimalista segun la categoria del producto */}
+      <CategoriaIcono
+        nombre={categoria}
+        color={fg}
+        strokeWidth={1.1}
+        className="h-[42%] w-[42%] opacity-70"
+      />
     </div>
   );
 }

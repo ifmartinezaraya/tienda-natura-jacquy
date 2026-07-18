@@ -116,11 +116,13 @@ export function CategoriaIcono({
   color,
   size = 22,
   strokeWidth = 1.5,
+  className,
 }: {
   nombre: string;
   color: string;
   size?: number;
   strokeWidth?: number;
+  className?: string;
 }) {
   return (
     <svg
@@ -132,6 +134,7 @@ export function CategoriaIcono({
       strokeWidth={strokeWidth}
       strokeLinecap="round"
       strokeLinejoin="round"
+      className={className}
     >
       {paths(nombre)}
     </svg>
