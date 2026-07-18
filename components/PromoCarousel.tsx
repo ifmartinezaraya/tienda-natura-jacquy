@@ -34,11 +34,11 @@ export function PromoCarousel() {
               key={p.titulo}
               className={`relative flex min-h-[320px] w-[280px] flex-none snap-start flex-col justify-between overflow-hidden rounded-3xl p-6 text-cream ${p.img ? 'bg-forest-deep' : `bg-gradient-to-br ${p.grad}`}`}
             >
-              {/* Imagen autorizada opcional de fondo */}
+              {/* Imagen del nicho de fondo (minimalista) */}
               {p.img && (
                 <>
-                  <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url("${p.img}")` }} />
-                  <div className="absolute inset-0 bg-gradient-to-t from-forest-deep/90 via-forest-deep/40 to-forest-deep/20" />
+                  <div className="absolute inset-0 bg-cover bg-center transition duration-700" style={{ backgroundImage: `url("${p.img}")` }} />
+                  <div className="absolute inset-0 bg-gradient-to-t from-forest-deep/92 via-forest-deep/35 to-forest-deep/5" />
                 </>
               )}
               {!p.img && (
