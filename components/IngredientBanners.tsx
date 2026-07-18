@@ -1,8 +1,5 @@
 import Link from 'next/link';
 
-const IMG = (id: string) =>
-  `https://images.unsplash.com/${id}?w=1000&q=75&auto=format&fit=crop`;
-
 // Contenido educativo original sobre ingredientes de origen natural.
 const INGREDIENTES = [
   {
@@ -10,7 +7,7 @@ const INGREDIENTES = [
     titulo: 'Nutricion intensa con Castana',
     texto:
       'Rica en aceites y nutrientes, ayuda a nutrir profundamente la piel dejandola suave y confortada. Ideal para pieles que buscan hidratacion y cuidado diario.',
-    img: IMG('photo-1447175008436-054170c2e979'),
+    img: '/banners/ingrediente-castana.svg',
     cta: 'Ver productos con castana',
     href: '/catalogo?q=castanha',
   },
@@ -19,7 +16,7 @@ const INGREDIENTES = [
     titulo: 'Frescura y equilibrio con Maracuja',
     texto:
       'Conocida por sus propiedades calmantes y su aroma relajante, aporta una sensacion de bienestar y ayuda a equilibrar la piel. Un clasico de la cosmetica natural.',
-    img: IMG('photo-1465146344425-f00d5f5c8f07'),
+    img: '/banners/ingrediente-maracuja.svg',
     cta: 'Ver productos con maracuja',
     href: '/catalogo?q=maracuja',
   },
