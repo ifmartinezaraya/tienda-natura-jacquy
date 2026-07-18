@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="bg2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#E9F1E7"/>
+      <stop offset="1" stop-color="#D5E3D2"/>
+    </linearGradient>
+    <filter id="blur2" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="70"/>
+    </filter>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg2)"/>
+
+  <g filter="url(#blur2)">
+    <circle cx="1250" cy="230" r="300" fill="#4C7A52" opacity="0.4"/>
+    <circle cx="1420" cy="720" r="270" fill="#B08B4F" opacity="0.4"/>
+    <circle cx="980" cy="640" r="220" fill="#C98B87" opacity="0.3"/>
+  </g>
+
+  <!-- rama con hojas -->
+  <g transform="translate(1120 90)">
+    <path d="M150 20 C90 200 90 470 180 700" fill="none" stroke="#2B3D2E" stroke-opacity="0.6" stroke-width="6" stroke-linecap="round"/>
+    <g fill="#4C7A52" fill-opacity="0.9">
+      <g transform="translate(130 120) rotate(-38)"><path d="M0 0 C40 -30 100 -30 140 0 C100 30 40 30 0 0 Z"/></g>
+      <g transform="translate(118 210) rotate(34)"><path d="M0 0 C40 -30 100 -30 140 0 C100 30 40 30 0 0 Z"/></g>
+      <g transform="translate(112 320) rotate(-40)"><path d="M0 0 C42 -32 104 -32 146 0 C104 32 42 32 0 0 Z"/></g>
+      <g transform="translate(128 430) rotate(30)"><path d="M0 0 C40 -30 100 -30 140 0 C100 30 40 30 0 0 Z"/></g>
+      <g transform="translate(150 540) rotate(-30)"><path d="M0 0 C38 -28 96 -28 134 0 C96 28 38 28 0 0 Z"/></g>
+    </g>
+  </g>
+
+  <!-- gotas -->
+  <g fill="#2B3D2E" fill-opacity="0.22">
+    <path d="M920 320 c0 22 -18 34 -18 34 s-18 -12 -18 -34 a18 18 0 0 1 36 0 z"/>
+    <circle cx="1470" cy="360" r="7"/>
+    <circle cx="980" cy="770" r="6"/>
+  </g>
+</svg>

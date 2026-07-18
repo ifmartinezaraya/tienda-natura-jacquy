@@ -32,8 +32,8 @@ export const HERO_SLIDES: HeroSlide[] = [
       'Perfumeria, cuidado facial, corporal, cabello y maquillaje. Descubre tus favoritos.',
     cta: 'Ver catalogo',
     href: '#catalogo',
-    // Reemplaza por tu banner autorizado de Natura:
-    img: STOCK('photo-1611251135345-18c56206b863'),
+    // Banner vectorial propio (skincare). Reemplazable por tu banner autorizado de Natura.
+    img: '/banners/hero-skincare.svg',
   },
   {
     eyebrow: 'Ingredientes de la naturaleza',
@@ -42,7 +42,7 @@ export const HERO_SLIDES: HeroSlide[] = [
       'Formulas inspiradas en la biodiversidad para el bienestar de toda la familia.',
     cta: 'Explorar productos',
     href: '#catalogo',
-    img: STOCK('photo-1512496015851-a90fb38ba796'),
+    img: '/banners/hero-botanica.svg',
   },
   {
     eyebrow: 'Facil y cercano',
@@ -51,7 +51,7 @@ export const HERO_SLIDES: HeroSlide[] = [
       'Arma tu carrito y coordina la entrega en simples pasos. Atencion personalizada.',
     cta: 'Escribenos',
     href: 'WHATSAPP',
-    img: STOCK('photo-1541643600914-78b084683601'),
+    img: '/banners/hero-perfume.svg',
   },
 ];
 
