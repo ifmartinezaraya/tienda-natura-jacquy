@@ -13,7 +13,7 @@ import {
   atributos,
   beneficios,
   comoUsar,
-  descripcionGenerica,
+  descripcionInteligente,
   mostrarNotas,
   notasTexto,
 } from '@/lib/productoDetalle';
@@ -39,7 +39,7 @@ export function DetalleProducto({
 
   const chips = atributos(producto);
   const bene = beneficios(producto.categoria);
-  const descripcion = producto.descripcion?.trim() || descripcionGenerica(producto);
+  const descripcion = producto.descripcion?.trim() || descripcionInteligente(producto);
 
   const msgWhatsapp = encodeURIComponent(
     `Hola! Quiero consultar por este producto: ${producto.nombre} (${formatCLP(producto.precio)}).`,

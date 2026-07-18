@@ -16,12 +16,90 @@ export function parsePack(nombre: string): string | null {
 
 // Chips de atributos derivados del producto.
 export function atributos(p: Producto): string[] {
-  const chips: string[] = [p.categoria];
+  const chips: string[] = [];
+  const linea = detectarLinea(p.nombre);
+  if (linea) chips.push(linea.nombre);
+  chips.push(p.categoria);
   const t = parseTamano(p.nombre);
   if (t) chips.push(t);
   const pack = parsePack(p.nombre);
   if (pack) chips.push(pack);
   return chips;
+}
+
+// --- Deteccion de LINEA de Natura a partir del nombre del producto ---
+type Linea = { nombre: string; descripcion: string };
+
+const LINEAS: { claves: string[]; linea: Linea }[] = [
+  { claves: ['ekos'], linea: { nombre: 'Ekos', descripcion: 'Linea inspirada en la biodiversidad brasilena, que rescata activos de origen vegetal de manera sostenible.' } },
+  { claves: ['kaiak'], linea: { nombre: 'Kaiak', descripcion: 'Linea de fragancias frescas, inspiradas en la conexion con la naturaleza.' } },
+  { claves: ['lumina'], linea: { nombre: 'Lumina', descripcion: 'Linea de cuidado capilar con tecnologia de aminoacidos para un cabello luminoso y sano.' } },
+  { claves: ['chronos'], linea: { nombre: 'Chronos', descripcion: 'Linea de cuidado facial enfocada en la salud, hidratacion y firmeza de la piel.' } },
+  { claves: ['tododia', 'todo dia'], linea: { nombre: 'Tododia', descripcion: 'Linea de cuidado corporal para el dia a dia, con aromas envolventes e hidratacion.' } },
+  { claves: ['faces'], linea: { nombre: 'Faces', descripcion: 'Linea de maquillaje versatil, practica y para todos los dias.' } },
+  { claves: ['natura una', 'una '], linea: { nombre: 'Una', descripcion: 'Linea de maquillaje sofisticada que realza tu belleza.' } },
+  { claves: ['humor'], linea: { nombre: 'Humor', descripcion: 'Linea de fragancias divertidas y desenfadadas.' } },
+  { claves: ['essencial'], linea: { nombre: 'Essencial', descripcion: 'Linea de perfumeria de alta gama, con fragancias sofisticadas.' } },
+  { claves: ['mamae', 'mamae e bebe', 'bebe'], linea: { nombre: 'Mamae e Bebe', descripcion: 'Linea de cuidado suave, especialmente pensada para mamas y bebes.' } },
+  { claves: ['homem'], linea: { nombre: 'Homem', descripcion: 'Linea de cuidado y fragancias pensada para el hombre.' } },
+  { claves: ['kriska'], linea: { nombre: 'Kriska', descripcion: 'Fragancia juvenil y vibrante.' } },
+  { claves: ['illia', 'ilia'], linea: { nombre: 'Ilia', descripcion: 'Linea de perfumeria femenina elegante.' } },
+  { claves: ['biografia'], linea: { nombre: 'Biografia', descripcion: 'Linea de fragancias femeninas de caracter unico.' } },
+];
+
+export function detectarLinea(nombre: string): Linea | null {
+  const n = nombre.toLowerCase();
+  for (const { claves, linea } of LINEAS) {
+    if (claves.some((c) => n.includes(c))) return linea;
+  }
+  return null;
+}
+
+// --- Deteccion de INGREDIENTE natural a partir del nombre ---
+const INGREDIENTES: { claves: string[]; texto: string }[] = [
+  { claves: ['castanha', 'castana'], texto: 'la nutricion intensa de la castana' },
+  { claves: ['maracuja'], texto: 'la frescura y el equilibrio del maracuya' },
+  { claves: ['andiroba'], texto: 'el bienestar reconfortante de la andiroba' },
+  { claves: ['pitanga'], texto: 'la vitalidad y frescura de la pitanga' },
+  { claves: ['murumuru', 'muru muru'], texto: 'la reparacion y suavidad del murumuru' },
+  { claves: ['pataua'], texto: 'el fortalecimiento del pataua' },
+  { claves: ['breubranco', 'breu branco'], texto: 'el aroma amaderado del breu branco' },
+  { claves: ['cacau', 'cacao'], texto: 'la hidratacion del cacao' },
+  { claves: ['ucuuba', 'ucuba', 'ucua'], texto: 'la nutricion del ucuuba' },
+  { claves: ['assai', 'asai', 'acai'], texto: 'las propiedades antioxidantes del asai' },
+  { claves: ['guarana'], texto: 'la energia del guarana' },
+  { claves: ['acerola'], texto: 'la vitamina C de la acerola' },
+];
+
+export function detectarIngrediente(nombre: string): string | null {
+  const n = nombre.toLowerCase();
+  for (const { claves, texto } of INGREDIENTES) {
+    if (claves.some((c) => n.includes(c))) return texto;
+  }
+  return null;
+}
+
+// Descripcion "inteligente": usa la linea y el ingrediente real detectados.
+export function descripcionInteligente(p: Producto): string {
+  const linea = detectarLinea(p.nombre);
+  const ing = detectarIngrediente(p.nombre);
+  const cat = p.categoria.toLowerCase();
+
+  const partes: string[] = [];
+
+  if (linea) {
+    partes.push(`${p.nombre} pertenece a la linea ${linea.nombre} de Natura. ${linea.descripcion}`);
+  } else {
+    partes.push(`${p.nombre} es parte de nuestra seleccion de ${cat} de Natura.`);
+  }
+
+  if (ing) {
+    partes.push(`Aprovecha ${ing} para el cuidado de tu piel, cabello o bienestar.`);
+  }
+
+  partes.push('Producto original de Natura. Consultanos si quieres mas informacion o asesoria sobre este producto.');
+
+  return partes.join(' ');
 }
 
 // Beneficios genericos por categoria (informativos, no especificos de marca).
