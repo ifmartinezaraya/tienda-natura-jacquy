@@ -101,16 +101,53 @@ export function ProductosAdmin() {
     setModal('form');
   }
 
+  // Normaliza cualquier foto a un cuadrado de 800x800 (recorte centrado),
+  // asi TODAS quedan del mismo tamano y livianas.
+  async function normalizarCuadrada(file: File, lado = 800): Promise<Blob> {
+    const dataUrl: string = await new Promise((res, rej) => {
+      const r = new FileReader();
+      r.onload = () => res(r.result as string);
+      r.onerror = rej;
+      r.readAsDataURL(file);
+    });
+    const img: HTMLImageElement = await new Promise((res, rej) => {
+      const im = new window.Image();
+      im.onload = () => res(im);
+      im.onerror = rej;
+      im.src = dataUrl;
+    });
+    const canvas = document.createElement('canvas');
+    canvas.width = lado;
+    canvas.height = lado;
+    const ctx = canvas.getContext('2d');
+    if (!ctx) return file;
+    // Fondo blanco (por si la imagen tiene transparencia)
+    ctx.fillStyle = '#ffffff';
+    ctx.fillRect(0, 0, lado, lado);
+    // Recorte cuadrado centrado
+    const min = Math.min(img.width, img.height);
+    const sx = (img.width - min) / 2;
+    const sy = (img.height - min) / 2;
+    ctx.drawImage(img, sx, sy, min, min, 0, 0, lado, lado);
+    return await new Promise((res) =>
+      canvas.toBlob((b) => res(b ?? file), 'image/jpeg', 0.85),
+    );
+  }
+
   async function subirImagen(file: File) {
     setSubiendo(true);
     try {
-      const ext = file.name.split('.').pop() || 'jpg';
+      const blob = await normalizarCuadrada(file);
       const nombreArchivo = `${Date.now()}-${Math.random()
         .toString(36)
-        .slice(2, 8)}.${ext}`;
+        .slice(2, 8)}.jpg`;
       const { error } = await supabase.storage
         .from('productos')
-        .upload(nombreArchivo, file, { upsert: true, cacheControl: '3600' });
+        .upload(nombreArchivo, blob, {
+          upsert: true,
+          cacheControl: '3600',
+          contentType: 'image/jpeg',
+        });
       if (error) throw error;
       const { data } = supabase.storage
         .from('productos')
