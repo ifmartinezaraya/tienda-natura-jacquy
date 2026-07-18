@@ -1,9 +1,10 @@
 'use client';
 
-import { useMemo, useRef, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import type { Producto } from '@/lib/types';
 import { ProductCard } from '@/components/ProductCard';
-import { estiloCategoria } from '@/lib/categorias';
+import { estiloCategoria, FRAGANCIA_CATS } from '@/lib/categorias';
+import { detectarGenero } from '@/lib/productoDetalle';
 
 function normalizar(s: string): string {
   return s
@@ -16,14 +17,25 @@ export function Catalogo({
   productos,
   initialBusqueda = '',
   initialCategoria = '',
+  initialGenero = '',
 }: {
   productos: Producto[];
   initialBusqueda?: string;
   initialCategoria?: string;
+  initialGenero?: '' | 'Ellas' | 'Ellos';
 }) {
   const [busqueda, setBusqueda] = useState(initialBusqueda);
   const [categoria, setCategoria] = useState<string>(initialCategoria);
+  const [genero, setGenero] = useState<'' | 'Ellas' | 'Ellos'>(initialGenero);
   const gridRef = useRef<HTMLDivElement>(null);
+
+  // Muestra el filtro por genero solo en categorias de fragancia.
+  const mostrarGenero = FRAGANCIA_CATS.includes(categoria);
+
+  // Si cambias a una categoria que no es fragancia, limpia el genero.
+  useEffect(() => {
+    if (!FRAGANCIA_CATS.includes(categoria) && genero) setGenero('');
+  }, [categoria, genero]);
 
   const categorias = useMemo(() => {
     const conteo = new Map<string, number>();
@@ -40,8 +52,14 @@ export function Catalogo({
     return productos
       .filter((p) => !categoria || p.categoria === categoria)
       .filter((p) => !q || normalizar(p.nombre).includes(q))
+      .filter(
+        (p) =>
+          !genero ||
+          !FRAGANCIA_CATS.includes(p.categoria) ||
+          detectarGenero(p.nombre) === genero,
+      )
       .sort((a, b) => a.nombre.localeCompare(b.nombre, 'es'));
-  }, [productos, busqueda, categoria]);
+  }, [productos, busqueda, categoria, genero]);
 
   function elegirCategoria(c: string) {
     setCategoria(c);
@@ -138,9 +156,23 @@ export function Catalogo({
             ))}
           </div>
 
+          {/* Filtro por genero (solo fragancias) */}
+          {mostrarGenero && (
+            <div className="mb-5 flex flex-wrap items-center justify-center gap-2">
+              <span className="text-xs font-bold uppercase tracking-wide text-ink-soft">
+                Fragancias
+              </span>
+              <GeneroChip label="Todas" activo={genero === ''} onClick={() => setGenero('')} />
+              <GeneroChip label="Para ellas" activo={genero === 'Ellas'} onClick={() => setGenero('Ellas')} />
+              <GeneroChip label="Para ellos" activo={genero === 'Ellos'} onClick={() => setGenero('Ellos')} />
+            </div>
+          )}
+
           <div className="mb-4 flex items-baseline justify-between">
             <h2 className="font-serif text-xl font-semibold text-ink">
-              {categoria || 'Todos los productos'}
+              {mostrarGenero && genero
+                ? `${categoria} · ${genero === 'Ellas' ? 'Para ellas' : 'Para ellos'}`
+                : categoria || 'Todos los productos'}
             </h2>
             <p className="text-sm text-ink-soft">
               {filtrados.length} {filtrados.length === 1 ? 'producto' : 'productos'}
@@ -181,6 +213,27 @@ function CatChip({
         activo
           ? 'border-forest bg-forest text-cream'
           : 'border-sand bg-cream-card text-ink-soft hover:border-forest/30 hover:text-forest'
+      }`}
+    >
+      {label}
+    </button>
+  );
+}
+
+function GeneroChip({
+  label,
+  activo,
+  onClick,
+}: {
+  label: string;
+  activo: boolean;
+  onClick: () => void;
+}) {
+  return (
+    <button
+      onClick={onClick}
+      className={`whitespace-nowrap rounded-full px-4 py-1.5 text-sm font-bold transition ${
+        activo ? 'bg-clay text-white' : 'bg-sand/60 text-ink-soft hover:bg-sand'
       }`}
     >
       {label}

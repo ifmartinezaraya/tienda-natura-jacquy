@@ -179,3 +179,15 @@ export function mostrarNotas(categoria: string): boolean {
 export function notasTexto(): string {
   return 'La familia olfativa y las notas pueden variar segun la linea del producto. Consultanos por el detalle de este aroma y te ayudamos a elegir el que mas te guste.';
 }
+
+
+// Detecta el genero de una fragancia a partir del nombre.
+export function detectarGenero(nombre: string): 'Ellas' | 'Ellos' | null {
+  const n = nombre
+    .toLowerCase()
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '');
+  if (/(masculin|homem|hombre|\bmen\b|caballero)/.test(n)) return 'Ellos';
+  if (/(femenin|mujer|\bella\b|dama)/.test(n)) return 'Ellas';
+  return null;
+}

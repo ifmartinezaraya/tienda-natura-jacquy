@@ -48,3 +48,7 @@ export const CATEGORIAS = [
   'Repuestos',
   'Accesorios',
 ];
+
+
+// Categorias de fragancia (permiten filtrar por genero: para ellas / para ellos).
+export const FRAGANCIA_CATS = ['Perfumeria', 'Colonias', 'Fragancias'];

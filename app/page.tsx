@@ -18,7 +18,7 @@ export const revalidate = 60;
 export default async function HomePage({
   searchParams,
 }: {
-  searchParams: { q?: string; cat?: string };
+  searchParams: { q?: string; cat?: string; genero?: string };
 }) {
   const supabase = createClient();
   const { data, error } = await supabase
@@ -34,6 +34,9 @@ export default async function HomePage({
 
   const busquedaInicial = searchParams.q ?? '';
   const categoriaInicial = searchParams.cat ?? '';
+  const g = (searchParams.genero ?? '').toLowerCase();
+  const generoInicial: '' | 'Ellas' | 'Ellos' =
+    g === 'ellas' || g === 'mujer' ? 'Ellas' : g === 'ellos' || g === 'hombre' ? 'Ellos' : '';
 
   return (
     <main className="min-h-screen">
@@ -76,6 +79,7 @@ export default async function HomePage({
                   productos={productos}
                   initialBusqueda={busquedaInicial}
                   initialCategoria={categoriaInicial}
+                  initialGenero={generoInicial}
                 />
               </div>
 
