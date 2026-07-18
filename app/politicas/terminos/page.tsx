@@ -7,60 +7,156 @@ export default function TerminosPage() {
   return (
     <PaginaContenido
       titulo="Terminos y condiciones"
-      bajada="Condiciones de uso de nuestra tienda y del proceso de compra."
+      bajada="Condiciones generales de contratacion, conforme a la legislacion vigente en Chile."
     >
       <p>
-        <strong>Plantilla base:</strong> ajusta este contenido con tus datos y
-        condiciones reales antes de publicarlo.
+        <strong>Aviso:</strong> este documento es una plantilla referencial
+        redactada conforme a la normativa chilena aplicable al comercio
+        electronico y la proteccion del consumidor. No constituye asesoria legal.
+        Completa los campos entre corchetes con tus datos reales y, de ser
+        posible, hazlo revisar por un(a) profesional antes de su publicacion
+        definitiva.
       </p>
 
-      <h2>1. Generalidades</h2>
+      <h2>1. Identificacion del proveedor</h2>
       <p>
-        Al usar esta tienda y realizar pedidos, aceptas estas condiciones.
-        {' '}{STORE_NAME} podra actualizarlas en cualquier momento.
+        Este sitio es operado por {STORE_NAME} (en adelante, &quot;el
+        Proveedor&quot; o &quot;la Tienda&quot;):
       </p>
-
-      <h2>2. Productos y precios</h2>
       <ul>
-        <li>Los precios se muestran en pesos chilenos (CLP).</li>
-        <li>Podemos actualizar precios y disponibilidad sin previo aviso.</li>
-        <li>Las imagenes son referenciales y pueden variar del producto real.</li>
+        <li>Nombre o razon social: [NOMBRE / RAZON SOCIAL]</li>
+        <li>RUT: [RUT]</li>
+        <li>Domicilio: [DIRECCION, COMUNA, CIUDAD]</li>
+        <li>Correo de contacto: [CORREO]</li>
+        <li>Telefono / WhatsApp: [TELEFONO]</li>
       </ul>
 
-      <h2>3. Pedidos</h2>
+      <h2>2. Ambito y aceptacion</h2>
       <p>
-        El pedido se envia a traves de WhatsApp y queda sujeto a confirmacion de
-        stock. Nos pondremos en contacto para coordinar pago y entrega. Un pedido
-        se considera confirmado una vez que lo validamos contigo.
+        Estos Terminos regulan el uso del sitio y la compra de productos
+        ofrecidos por la Tienda. Al navegar, registrarte o realizar un pedido,
+        declaras haber leido y aceptado estas condiciones, nuestra{' '}
+        <a href="/politicas/privacidad">Politica de Privacidad</a> y la
+        informacion de <a href="/envios">Envios y entregas</a>. Si no estas de
+        acuerdo, te pedimos abstenerte de usar el sitio.
       </p>
 
-      <h2>4. Pagos</h2>
+      <h2>3. Productos, precios e impuestos</h2>
+      <ul>
+        <li>Los precios se expresan en pesos chilenos (CLP) e incluyen el IVA cuando corresponde.</li>
+        <li>Los precios y la disponibilidad pueden actualizarse; rige el precio informado al confirmar el pedido.</li>
+        <li>Las imagenes y descripciones son referenciales y pueden presentar variaciones respecto del producto real.</li>
+        <li>Ante un error evidente de precio o de sistema, la Tienda podra no confirmar la compra, informandote oportunamente.</li>
+      </ul>
+
+      <h2>4. Proceso de compra y formacion del consentimiento</h2>
       <p>
-        Acordamos el medio de pago al confirmar el pedido (por ejemplo, efectivo
-        o transferencia). El pedido se prepara segun las condiciones acordadas.
+        La compra se realiza seleccionando productos y enviando el pedido a
+        traves de WhatsApp. El pedido queda sujeto a confirmacion de stock y de
+        las condiciones de pago y entrega. Conforme al articulo 12 A de la Ley
+        N&deg; 19.496, el consentimiento se entiende formado cuando recibes la
+        confirmacion de la compra por un medio que te permita almacenarla o
+        imprimirla. Guardaremos y podremos entregarte una copia del detalle de tu
+        pedido. Los registros electronicos tienen valor conforme a la Ley
+        N&deg; 19.799 sobre documentos y firma electronica.
       </p>
 
-      <h2>5. Entregas</h2>
+      <h2>5. Medios de pago</h2>
       <p>
-        Las condiciones de entrega se detallan en la seccion de{' '}
+        Los medios de pago disponibles (por ejemplo, efectivo, transferencia
+        bancaria u otros) se acuerdan al confirmar el pedido. El producto se
+        prepara y entrega segun las condiciones pactadas.
+      </p>
+
+      <h2>6. Despacho y entrega</h2>
+      <p>
+        Las modalidades, zonas, plazos y costos de entrega se detallan en{' '}
         <a href="/envios">Envios y entregas</a>. Los plazos son estimados y
-        pueden variar por factores externos.
+        pueden variar por factores externos. Coordinaremos contigo la entrega.
       </p>
 
-      <h2>6. Cambios y devoluciones</h2>
+      <h2>7. Derecho a retracto</h2>
       <p>
-        Si tienes un problema con tu producto, escribenos. Evaluaremos cambios o
-        devoluciones segun el estado del producto y la normativa de proteccion
-        al consumidor vigente.
+        En las compras realizadas a distancia, tienes derecho a poner termino
+        unilateralmente al contrato dentro del plazo de <strong>10 dias
+        corridos</strong> contados desde la recepcion del producto o desde la
+        celebracion del contrato en el caso de servicios, conforme al articulo
+        3&nbsp;bis de la Ley N&deg; 19.496. Para ejercerlo, el producto debe
+        encontrarse en las mismas condiciones en que lo recibiste. Este derecho
+        no aplica en los casos exceptuados por la ley (por ejemplo, productos que
+        por su naturaleza no puedan devolverse o que puedan deteriorarse con
+        rapidez). Te reembolsaremos las sumas pagadas en el plazo legal.
       </p>
 
-      <h2>7. Contacto</h2>
+      <h2>8. Garantia legal</h2>
       <p>
-        Para cualquier consulta sobre estos terminos, escribenos por nuestros
-        canales de contacto.
+        Todos los productos cuentan con la garantia legal establecida en la Ley
+        N&deg; 19.496 (modificada por la Ley N&deg; 21.398). Si el producto
+        presenta fallas o no corresponde a lo ofrecido, puedes optar por su
+        reparacion, su reposicion (cambio) o la devolucion de lo pagado, dentro
+        del plazo legal de <strong>6 meses</strong> desde la recepcion. Conserva
+        tu comprobante de compra para agilizar el proceso.
       </p>
 
-      <p><strong>Ultima actualizacion:</strong> [completar fecha].</p>
+      <h2>9. Cambios y devoluciones</h2>
+      <p>
+        Para ejercer el retracto o la garantia legal, escribenos por nuestros
+        canales de contacto indicando tu pedido y el motivo. Te informaremos el
+        procedimiento para la devolucion o el cambio y los plazos aplicables.
+      </p>
+
+      <h2>10. Responsabilidad</h2>
+      <p>
+        La Tienda responde por sus obligaciones conforme a la ley. No sera
+        responsable por interrupciones del servicio ajenas a su control ni por
+        el uso indebido del sitio por parte de terceros. Nada de lo aqui
+        senalado limita los derechos que la ley reconoce a los consumidores.
+      </p>
+
+      <h2>11. Propiedad intelectual</h2>
+      <p>
+        Los contenidos propios del sitio (textos, diseno, logotipo y marca
+        {' '}{STORE_NAME}) pertenecen a la Tienda o se usan con autorizacion. Las
+        marcas de los productos comercializados pertenecen a sus respectivos
+        titulares y se muestran solo con fines de identificacion del producto.
+      </p>
+
+      <h2>12. Proteccion de datos personales</h2>
+      <p>
+        El tratamiento de tus datos se rige por nuestra{' '}
+        <a href="/politicas/privacidad">Politica de Privacidad</a>, conforme a la
+        Ley N&deg; 19.628 y demas normativa vigente sobre proteccion de datos.
+      </p>
+
+      <h2>13. Reclamos y SERNAC</h2>
+      <p>
+        Ante cualquier inconveniente, escribenos primero: buscaremos una
+        solucion. Sin perjuicio de ello, puedes presentar tus reclamos ante el
+        Servicio Nacional del Consumidor (SERNAC) a traves de sus canales
+        oficiales.
+      </p>
+
+      <h2>14. Legislacion aplicable y jurisdiccion</h2>
+      <p>
+        Estos Terminos se rigen por las leyes de la Republica de Chile. Cualquier
+        controversia se sometera a los tribunales competentes de Chile, sin
+        perjuicio de los derechos y procedimientos especiales que la ley del
+        consumidor establece a tu favor.
+      </p>
+
+      <h2>15. Modificaciones</h2>
+      <p>
+        La Tienda podra actualizar estos Terminos. La version vigente sera la
+        publicada en esta pagina, con su fecha de actualizacion.
+      </p>
+
+      <h2>16. Contacto</h2>
+      <p>
+        Para consultas sobre estos Terminos, escribenos a [CORREO] o por
+        WhatsApp a [TELEFONO].
+      </p>
+
+      <p><strong>Ultima actualizacion:</strong> [COMPLETAR FECHA].</p>
     </PaginaContenido>
   );
 }
